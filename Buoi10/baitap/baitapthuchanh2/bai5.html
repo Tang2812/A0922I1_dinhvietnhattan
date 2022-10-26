@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a=prompt("nhap vao do dai  canh thu nhat: ")
+    let b=prompt("nhap vao do dai  canh thu hai: ")
+    if(a<0 || b<0){
+        alert("nhap sai")
+    }else{
+        if(isNaN(a)==true || isNaN(b)==true){
+            alert("nhap sai")
+        }else{
+            alert("dien tich la: "+a*b/2);
+        }
+    }
+</script>
+</body>
+</html>
