@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let sogio=+prompt("So gio goi dien trong thang:")
+    let cuocphi
+    if(sogio>20){
+        cuocphi=sogio*22000+(sogio*20)/100
+    }else if(sogio>=15 && sogio<20){
+        cuocphi=sogio*22000+(sogio*10)/100
+    }else if(sogio>=10 && sogio<15){
+        cuocphi=sogio*22000+(sogio*5)/100
+    }else if(sogio<10){
+        cuocphi=sogio*22000
+    }
+    alert("Tong tien cuoc phi goi phai trả:"+cuocphi)
+</script>
