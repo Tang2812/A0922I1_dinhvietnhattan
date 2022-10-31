@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    while(true){
+        let num=prompt("nhap vao mot so nguyen duong: ")
+
+        if(num<0){
+            alert("nhap sai, nhap lai!!")
+        }else{
+            let t=1;
+            for(let i=1;i<=num;i++){
+                t=t*i;
+            }
+            document.write("giai thua cua "+num+" la: "+t)
+            break;
+        }
+    }
+</script>
+</body>
+</html>

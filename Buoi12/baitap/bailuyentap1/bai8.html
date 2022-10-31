@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" onclick="game()" value="Play" >
+</body>
+<script>
+    function game() {
+let num;
+let numofad=Math.floor(Math.random() *10);
+let dem=0;
+ while(true){
+
+if(dem===3){
+    alert("ban da doan het so lan roi!!")
+    break;
+}else{
+    num=prompt("nhap vao so nguyen co gia tri tu 0->10")
+    if(num<0||num>10){
+        alert("ban nhap sai mat roi")
+    }else{
+        if(num<numofad){
+            alert("so ban nhap nho hon so cua he thong, thu tang len xem");
+        }else{
+            if(num>numofad){
+                alert("so ban nhap lon hon so cua he thong, thu giam xuong xem");
+
+            }else{
+                alert("Chuc mung ban!Ban nhap dung roi do")
+                break;
+            }
+        }
+    }
+}
+dem++;
+ }
+
+    }
+</script>
+</html>

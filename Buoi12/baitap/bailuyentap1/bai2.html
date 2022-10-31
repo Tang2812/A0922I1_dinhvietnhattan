@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhiet;
+    while(true){
+        nhiet=+prompt("nhap vao nhiet do: ")
+        if(nhiet>100){
+            alert("hay ha nhiet!")
+        }else{
+            if(nhiet<0){
+                alert("hay tang nhiet do")
+            }else{
+                alert("nhiet do hien tai la: "+nhiet)
+                break;
+            }
+        }
+    }
+</script>
+</body>
+</html>
