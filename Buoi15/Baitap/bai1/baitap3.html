@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>doichuhoachuthuong</title>
+</head>
+<body>
+<script>
+    var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    let str="Dinh Viet Nhat Tan"
+    let kq=[]
+    for(let i=0;i<str.length;i++){
+        if(UPPER.indexOf(str[i])!== -1){
+            kq.push(str[i].toLowerCase())
+        }else{
+            if(LOWER.indexOf(str[i])!==-1){
+                kq.push(str[i].toUpperCase())
+            } else
+            {
+                kq.push(str[i])
+            }
+        }
+    }
+    document.write(kq.join(""))
+</script>
+</body>
+</html>

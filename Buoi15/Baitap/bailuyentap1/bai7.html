@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mảng bài 7</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let array=[]
+    let numOf=parseInt(prompt("Nhập số lượng mảng:"))
+    for (let i = 0; i <numOf ; i++) {
+        array[i]=parseInt(prompt("Nhập vào phần tử thứ "+(i+1)+":"))
+    }
+    let v=parseInt(prompt("Nhập tìm kiếm:"))
+    let search=array.indexOf(v)
+    if(search<0){
+        document.write("v is not in array")
+    }else{
+        for (let i = search; i <(array.length-1) ; i++) {
+            let tmp=array[i]
+            array[i]=array[i+1]
+            array[i+1]=tmp
+        }
+        array[array.length-1]=0
+    }
+    document.write(array)
+
+</script>

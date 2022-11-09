@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mảng bài 6</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let array=[]
+    let numOf=parseInt(prompt("Nhập số lượng mảng:"))
+    for (let i = 0; i <numOf ; i++) {
+        array[i]=parseInt(prompt("Nhập vào phần tử thứ "+(i+1)+":"))
+    }
+    let v=parseInt(prompt("Nhập tìm kiếm:"))
+    let search=array.indexOf(v)
+    search<0?document.write("v is not in array"):document.write("v is in array")
+</script>

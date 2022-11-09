@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mảng bài 5</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let array=[]
+    let numOf=parseInt(prompt("Nhập số lượng mảng:"))
+    let count=0
+    for (let i = 0; i <numOf ; i++) {
+        array[i]=parseInt(prompt("Nhập vào phần tử thứ "+(i+1)+":"))
+        if(array[i]<0)
+            count++
+    }
+    document.write("Số nguyên âm là: "+count)
+</script>
