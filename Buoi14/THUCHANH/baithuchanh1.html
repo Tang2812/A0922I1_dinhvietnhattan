@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Sample Screen:</title>
 </head>
 <body>
-$END$
+<input type="text" id="txtValue"/>
+<input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();"/>
+<input type="button" id="btnDisplay" value="Display" onclick="display_array();"/>
+<div id="result"></div>
 </body>
+<script>
+    let arr=[];
+    let x=0;
+    function add_element_to_array() {
+        arr[x]=+document.getElementById("txtValue").value;
+        alert("nhan gia tri: "+arr[x]+" vao mang")
+        x++;
+        document.getElementById("txtValue").value="";
+    }
+    function display_array() {
+        let e = "<hr/>";
+        for (let i = 0; i < arr.length; i++) {
+            e += "Element " + i + " = " + arr[i] + "<br/>";
+        }
+        document.getElementById("result").innerHTML = e;
+    }
+</script>
 </html>

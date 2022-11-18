@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lớp_date</title>
+</head>
+<body>
+<script>
+    let date = function (a, b, c) {
+        this.day = a;
+        this.month = b;
+        this.year = c;
+        this.getday = function () {
+            return this.day
+        }
+        this.getmonth = function () {
+            return this.month
+        }
+        this.getyear = function () {
+            return this.year
+        }
+        this.setday = function (a) {
+            this.day = a;
+        }
+        this.setmotnh = function (b) {
+            this.month = b;
+        }
+        this.setyear = function (c) {
+            this.year = c;
+        }
+        this,setdate=function (a,b,c) {
+            this.day = a;
+            this.month = b;
+            this.year = c;
+        }
+        this.tostring=function () {
+return this.day+"/"+this.month+"/"+this.year
+        }
+    }
+    let a= new date(4,2,2002)
+    alert(a.tostring())
+</script>
+</body>
+</html>

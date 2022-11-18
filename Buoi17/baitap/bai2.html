@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>chuyển_đổi_met_và_feet</title>
 </head>
 <body>
-$END$
+<script>
+    function meterToFoot(meter) {
+        return 3.279 * meter;
+    }
+
+    function footToMetter(foot) {
+        return 0.305 * foot;
+    }
+
+    let met = prompt("nhập vào số met bạn cần đổi:")
+    alert("kết quả là: " + meterToFoot(met) + " feet")
+    let fet = prompt("nhập vào số feet bạn cần đổi:")
+    alert("kết quả là: " +footToMetter(fet) + " met")
+</script>
 </body>
 </html>

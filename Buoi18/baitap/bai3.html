@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>điện_thoại</title>
+</head>
+<body>
+<script>
+    let phone = function (pin, thunhap, thuden, thugui, trangthai) {
+        this.pin = pin;
+        this.thunhap = thunhap
+        this.thuden = thuden
+        this.thugui = thugui
+        this.trangthai = trangthai
+        this.kttt = function () {
+            this.pin--
+            return trangthai
+        }
+        this.turnOn = function () {
+            this.trangthai = "on"
+            this.pin--
+        }
+        this.turnoff = function () {
+            this.trangthai = "off"
+            this.pin--
+        }
+        this.sacdienthoai = function () {
+            this.pin = 100
+        }
+        this.soantinnhan = function (str) {
+            this.pin--;
+            this.thunhap = str
+        }
+        this.nhantinnhan = function (str) {
+            this.thuden = str;
+        }
+        this.guitinnhan = function (str) {
+            this.thugui = this.str;
+        }
+        this.xemthuden = function () {
+            alert(this.thuden)
+        }
+
+    }
+</script>
+</body>
+</html>
