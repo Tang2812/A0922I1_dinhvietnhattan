@@ -36,6 +36,7 @@ class StopWatch{
 }
 public class bai2 {
     public static void main(String[] args) {
+
         StopWatch ojb=new StopWatch();
         ojb.start();
         try {
