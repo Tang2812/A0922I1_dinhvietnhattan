@@ -58,7 +58,6 @@ public class quanlidulieu {
         a.add(new person("D","Male",LocalDate.parse("2004-12-1")));
         Queue<person> male=new LinkedList<>();
         Queue<person>feMale=new LinkedList<>();
-        Collections.sort(a);
 
     }
 }
