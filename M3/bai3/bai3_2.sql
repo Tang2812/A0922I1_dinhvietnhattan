@@ -30,7 +30,9 @@ inner join `order` on customer.cid=`order`.cid;
 select * from product 
 inner  join Odertail on product.pID=Odertail.pid inner join `order` on odertail.oId=`order`.oId;
 select * from customer
- inner join `order`on count(`order`.cId) 
-group by cid 
-having count(`order`.cId)=0;
-
+left join `order`on `order`.cID=customer.cID
+where `order`.cID is null;
+select `order`.oId,oDate,sum(Odertail.odQTY*product.pPrice) as ototalprice
+from `order`
+left join odertail on  `order`.oId=odertail.oId left join product on odertail.pId=product.pID
+group by `order`.oId;
