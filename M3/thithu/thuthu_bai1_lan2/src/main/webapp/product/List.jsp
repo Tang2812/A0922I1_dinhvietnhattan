@@ -23,8 +23,12 @@
         </th>
 
         <th>
-            <input type="text" name="nameSearch">
-            <a class="btn btn-success" role="button" href="/ProductServlet?action=find">Find</a>
+            <form method="get">
+                <input type="text" name="action" value="find" hidden>
+                <input type="text" name="nameSearch">
+                <button class="btn btn-success" type="submit">Find</button>
+            </form>
+
         </th>
     </tr>
 </table>

@@ -38,6 +38,7 @@ public class ProductServlet extends HttpServlet {
 
     private void find(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name=request.getParameter("nameSearch");
+        System.out.println(name);
         request.setAttribute("productList",service.find(name));
         request.getRequestDispatcher("/product/List.jsp").forward(request,response);
     }
@@ -67,9 +68,9 @@ public class ProductServlet extends HttpServlet {
             case "create":
                 createProduct(request,response);
                 break;
-            case "find":
-                find(request,response);
-                break;
+//            case "find":
+//                find(request,response);
+//                break;
             case "edit":
                 editProduct(request,response);
                 break;

@@ -119,13 +119,12 @@ public class ProductRepositoryImpl implements ProductRepository {
         List<Product> productList = new ArrayList<>();
         try (Connection connection = DBConnection.getConnection();
              PreparedStatement statement = connection.prepareStatement("select ID,TenSanPham,Gia,SoLuong,MauSac,MoTa,TenDanhMuc from dbthi left join danhmuc on dbthi.idDanhMuc=danhmuc.idDanhMuc\n" +
-                     "having TenSanPham like concat(\"%\",\"?\",\"%\");");
-             ResultSet resultSet = statement.executeQuery();
+                     "having TenSanPham like concat('%',?,'%');");
 
         ) {
-
+            statement.setString(1,string);
+            ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
-                statement.setString(1,string);
                 int id = resultSet.getInt(1);
                 String ten = resultSet.getString(2);
                 int gia = resultSet.getInt(3);
