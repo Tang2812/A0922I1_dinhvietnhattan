@@ -9,6 +9,8 @@
 
 <h1>Customer</h1>
 <a class="btn btn-success" role="button" href="/CustomerServlet?action=create">Create</a>
+<a class="btn btn-success" role="button" href="/CustomerServlet?action=remove">Remove</a>
+<%--<a class="btn btn-success" role="button" href="/CustomerServlet?action=edit">Edit</a>--%>
 <table class="table">
   <thead>
   <tr>
@@ -23,6 +25,8 @@
       <td>${customer.ten}</td>
       <td>${customer.tuoi}</td>
       <td>${customer.quequan}</td>
+      <td ><a class="btn-success" href="/CustomerServlet?action=edit&id=${customer.ten}">Edit </a></td>
+      <td ><a class="btn-success" href="/CustomerServlet?action=View&id=${customer.ten}">View </a></td>
     </tr>
   </c:forEach>
   </tbody>

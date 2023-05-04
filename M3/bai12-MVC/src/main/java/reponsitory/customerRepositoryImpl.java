@@ -24,4 +24,41 @@ public class customerRepositoryImpl implements ICustomerReponsitory{
     public void save(customer c1) {
         customerList.add(c1);
     }
+
+    @Override
+    public void remove(String c1) {
+        int vt=-1;
+        for (int i = 0; i <customerList.size() ; i++) {
+            if(customerList.get(i).getTen().equals(c1)==true){
+                vt=i;
+            }
+        }
+        if(vt>=0){
+            customerList.remove(vt);
+        }
+    }
+
+    @Override
+    public void edit(String name, int tuoi, String queQuan) {
+        for (int i = 0; i < customerList.size(); i++) {
+            if(customerList.get(i).getTen().equals(name)){
+                customerList.get(i).setTuoi(tuoi);
+                customerList.get(i).setQuequan(queQuan);
+            }
+        }
+
+//        int vt=-1;
+//        for (int i = 0; i <customerList.size() ; i++) {
+//            if(customerList.get(i).getTen().equals(name)==true){
+//                vt=i;
+//            }
+//        }
+//        if(vt>=0){
+//
+//            customerList.get(vt).setTuoi(tuoi);
+//            customerList.get(vt).setQuequan(queQuan);
+//        }
+    }
+
+
 }

@@ -5,52 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d15f1c5a-4507-4858-89aa-d0c4805026a4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../bai10/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/.idea/webContexts.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/java/controller/CustomerServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/java/model/customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/java/reponsitory/ICustomerReponsitory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/java/reponsitory/customerRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/java/service/CustomerServiceempl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/java/service/ICustomerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/resources/META-INF/beans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/customer/list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/css/bootstrap-grid.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/css/bootstrap-grid.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/css/bootstrap-reboot.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/css/bootstrap-reboot.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/img/avatar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/img/avatar_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/img/avatar_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/img/avatar_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/img/avatar_4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/img/no_photo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/js/bootstrap.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/js/bootstrap.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/js/bootstrap.bundle.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/js/bootstrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/js/bootstrap.min.js.map" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../M2/bai2/src/bai_test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai12_2-MVC/bai2_new/src/main/java/repository/DBConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai11-jstl/bai2-jstl/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bai11-jstl/bai2-jstl/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/CustomerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/controller/CustomerServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/reponsitory/ICustomerReponsitory.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/reponsitory/ICustomerReponsitory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/reponsitory/customerRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/reponsitory/customerRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/service/CustomerServiceempl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/service/CustomerServiceempl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/service/ICustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/service/ICustomerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/bai10-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/bai10-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/CustomerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reponsitory/ICustomerReponsitory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reponsitory/ICustomerReponsitory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reponsitory/customerRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reponsitory/customerRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/CustomerServiceempl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/CustomerServiceempl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/ICustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/ICustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/customer/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/customer/list.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +95,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2OBCANSKRLRWNhFv6IfAPCOluLD" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -129,7 +109,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/codeGym/A09/A0922I1_dinhvietnhattan/M3/bai12-MVC",
+    "last_opened_file_path": "C:/codeGym/A09/A0922I1_dinhvietnhattan/M3/bai12_2-MVC/bai2_new",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -189,7 +169,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Tomcat 9.0.73" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.73" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/CustomerServlet" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="Gradle : com.example : bai10-1.0-SNAPSHOT.war">
@@ -306,6 +286,12 @@
       <workItem from="1681198326317" duration="1253000" />
       <workItem from="1681222763399" duration="4931000" />
       <workItem from="1681231024085" duration="45000" />
+      <workItem from="1681297767974" duration="12149000" />
+      <workItem from="1681442336504" duration="3825000" />
+      <workItem from="1681475068481" duration="25000" />
+      <workItem from="1681738878491" duration="2488000" />
+      <workItem from="1681903400969" duration="7219000" />
+      <workItem from="1682301816114" duration="333000" />
     </task>
     <servers />
   </component>
@@ -322,5 +308,13 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="controller.CustomerServlet" memberName="config" />
+        <PinnedItemInfo parentTag="service.CustomerServiceempl" memberName="t" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
