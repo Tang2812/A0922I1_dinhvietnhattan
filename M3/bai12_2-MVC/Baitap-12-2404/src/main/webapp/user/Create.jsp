@@ -18,25 +18,37 @@
 
 
       <h1 class="">Create new product</h1>
-      <%--ID--%>
-      <%--      <div class="form-group">--%>
-      <%--        <label for="txtName">Id</label>--%>
-      <%--        <input type="text" class="form-control" name="productId" id="txtId">--%>
-      <%--      </div>--%>
-      <%--      Name--%>
       <div class="form-group">
         <label for="txtName">Name</label>
-        <input type="text" class="form-control" name="userName" id="txtName">
+        <input type="text" class="form-control" name="productTen" id="txtName">
       </div>
       <%--      Email--%>
       <div class="form-group">
-        <label for="txtMail">Mail</label>
-        <input type="text" class="form-control" name="userEmail" id="txtMail">
+        <label for="productGia">Gia</label>
+        <input type="text" class="form-control" name="productGia" id="productGia">
+      </div>
+      <%--      Email--%>
+      <div class="form-group">
+        <label for="productSoLuong">So Luong</label>
+        <input type="text" class="form-control" name="productSoLuong" id="productSoLuong">
       </div>
       <%--      Country--%>
       <div class="form-group">
-        <label for="txtCountry">Country</label>
-        <input type="text" class="form-control" name="userCountry" id="txtCountry">
+        <label for="productMauSac">Mau Sac</label>
+        <input type="text" class="form-control" name="productMauSac" id="productMauSac">
+      </div>
+      <div class="form-group">
+        <label for="productMoTa">Mo Ta</label>
+        <input type="text" class="form-control" name="productMoTa" id="productMoTa">
+      </div>
+      <div class="form-group">
+        <label for="productDanhMuc">Danh Muc</label>
+        <%--                <input type="text" class="form-control" name="productDanhMuc" id="productDanhMuc">--%>
+        <select name="productDanhMuc" id="productDanhMuc">
+          <option>Danh Muc</option>
+          <option value="Iphone">Iphone</option>
+          <option value="Redmi">Redmi</option>
+        </select>
       </div>
       <div class="form-group mt-2">
         <button class="btn btn-success" role="button" type="submit">Create</button>
