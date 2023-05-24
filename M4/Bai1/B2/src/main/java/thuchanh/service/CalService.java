@@ -7,8 +7,9 @@ public class CalService implements thuchanh.service.Cal {
 
     CalRepo cal=new CalRepoImpl();
 
+
     @Override
-    public String trans(String anh) {
-        return cal.trans(anh);
+    public float Cal(float num1, float num2, String calculation) {
+        return cal.Cal(num1, num2, calculation);
     }
 }

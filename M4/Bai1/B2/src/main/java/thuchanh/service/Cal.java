@@ -1,5 +1,5 @@
 package thuchanh.service;
 
 public interface Cal {
-    String trans(String anh);
+    float Cal(float num1, float num2, String calculation);
 }
