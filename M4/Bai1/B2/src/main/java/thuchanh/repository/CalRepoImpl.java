@@ -7,7 +7,7 @@ public class CalRepoImpl implements CalRepo{
 
 
     @Override
-    public float Cal(float num1, float num2, String calculation) {
+    public float cal(float num1, float num2, String calculation) {
         float result = -999;
         switch (calculation){
             case "+":
