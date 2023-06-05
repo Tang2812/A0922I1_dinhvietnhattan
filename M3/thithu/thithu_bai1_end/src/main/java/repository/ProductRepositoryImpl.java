@@ -68,7 +68,7 @@ public class ProductRepositoryImpl implements ProductRepository{
 
     @Override
     public Product findByid(int id) {
-        return findAll().stream().filter(e -> e.getId() == id).findFirst().get();
+            return findAll().stream().filter(e -> e.getId() == id).findFirst().get();
     }
 
     @Override
