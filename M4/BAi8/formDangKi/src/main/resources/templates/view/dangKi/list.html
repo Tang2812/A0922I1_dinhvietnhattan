@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <table>
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+        <th>Sdt</th>
+        <th>Email</th>
+    </tr>
+    <tr th:each="d: ${dangKi}" th:object="${d}">
+        <td th:text="*{id}"></td>
+        <td th:text="*{firstName}"></td>
+        <td th:text="*{lastName}"></td>
+        <td th:text="*{age}"></td>
+        <td th:text="*{sdt}"></td>
+        <td th:text="*{mail}"></td>
+    </tr>
+</table>
+</body>
+</html>

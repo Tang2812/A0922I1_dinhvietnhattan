@@ -11,5 +11,5 @@ public interface CategoryService {
     Category findById(int id);
     List<Category> findAll();
     boolean deleteById(int id);
-    List<Blog> sortByDate();
+
 }

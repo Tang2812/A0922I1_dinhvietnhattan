@@ -9,6 +9,7 @@
         Name: <input type="text" name="name" th:value="${name != null ? name: ''}">
        <input type="submit" value="Search">
     </form>
+    <a th:href="@{/blog/sort}">Sort</a>
     <table>
         <tr>
             <th>ID</th>

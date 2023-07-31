@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List product</title>
+    <link rel="stylesheet" href="/css/list.css">
+</head>
+<body>
+<h2><span><b style="color: red" >Product Manage</b></span></h2>
+<a th:href="@{/product/create}"><button>Create New product</button></a>
+<br>
+<br>
+<!--    <form th:action="@{/product/search}" method="get" >-->
+<!--        <span id="redcolor">Name</span>: <input type="text" name="name" th:value="${name != null ? name: ''}">-->
+<!--       <input type="submit" value="Search1">-->
+<!--    </form>-->
+<!--<br>-->
+<!--<form th:action="@{/product/searchPrice}" method="get" >-->
+<!--    <span id="redcolor">Price</span>: <input type="number" name="max" th:value="${max != null ? max: '0'}">-->
+<!--    <input type="submit" value="Search2">-->
+<!--</form>-->
+<!--<br>-->
+<!--<form th:action="@{/product/searchCategory}" method="get" >-->
+<!--    <span id="redcolor">Category</span>:   <select name="categoryId">-->
+<!--    <option th:each="c: ${categories}" th:value="${c.categoryId}"-->
+<!--            th:text="${c.categoryName}"></option>-->
+<!--</select>-->
+<!--    <input type="submit" value="Search3">-->
+<!--</form>-->
+<form th:action="@{/product/searchall}" method="get" >
+    <span id="redcolor">Name</span>: <input type="text" name="name" th:value="${name != null ? name: ''}">
+    <span id="redcolor">Price</span>: <input type="number" name="max" th:value="${max != null ? max: 0}">
+    <span id="redcolor">Category</span>:   <select name="categoryId">
+    <option th:each="c: ${categories}" th:value="${c.categoryId}"
+            th:text="${c.categoryName}"></option>
+</select>
+    <input type="submit" value="Search3">
+</form>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Strat Price</th>
+            <th>Category</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        <tr th:each="p: ${products}" th:object="${p}">
+            <td th:text="*{id}"></td>
+            <td th:text="*{name}"></td>
+            <td th:text="*{#numbers.formatCurrency(startPrice)}"></td>
+            <td th:text="*{category.categoryName}"></td>
+            <td th:text="*{status}"></td>
+            <td>
+                <a th:href="@{/product/detail/{id}(id=*{id})}">Detail</a>
+                <a th:href="@{/product/update(id=*{id})}">Update</a>
+                <a th:href="@{/product/delete(id=*{id})}">Delete</a>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

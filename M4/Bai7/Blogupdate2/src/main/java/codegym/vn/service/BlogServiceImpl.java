@@ -46,7 +46,7 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public List<Blog> sortByDate() {
-
+      return   blogRepository.sortByDate();
     }
 //    @Autowired
 //    private ProductRepository repository;

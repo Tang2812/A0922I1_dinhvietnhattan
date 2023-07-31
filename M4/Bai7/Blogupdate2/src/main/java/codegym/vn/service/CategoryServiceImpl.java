@@ -44,9 +44,5 @@ public class CategoryServiceImpl implements CategoryService{
         return true;
     }
 
-    @Override
-    public List<Blog> sortByDate() {
 
-
-    }
 }
