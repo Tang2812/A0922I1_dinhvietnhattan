@@ -1,13 +1,13 @@
-package com.example.muonsach;
+package codegym.vn;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MuonSachApplication {
+public class BookNewApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MuonSachApplication.class, args);
+		SpringApplication.run(BookNewApplication.class, args);
 	}
 
 }
