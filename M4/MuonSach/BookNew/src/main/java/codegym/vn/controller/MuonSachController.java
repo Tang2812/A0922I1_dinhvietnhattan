@@ -4,6 +4,7 @@ import codegym.vn.service.BookService;
 import codegym.vn.service.BorrowCardService;
 import codegym.vn.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,8 +22,9 @@ public class MuonSachController {
 @Autowired
     UserService userService;
 @GetMapping
-    String showListBook(Model model){
-    model.addAttribute("bookList",bookService.findAll());
+    String showListBook(Pageable pageable, Model model){
+
+    model.addAttribute("bookList",bookService.findAllPage(pageable));
     return "/view/muonSach/list";
 }
 @GetMapping("/muonSach")

@@ -128,7 +128,6 @@ public class Chuc_nang_1 {
         }
         this.ghiFile(false);
     }
-
     public void nopTien() {
         this.docFile();
         String ma;

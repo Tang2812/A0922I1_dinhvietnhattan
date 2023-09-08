@@ -14,6 +14,6 @@ public interface ProductRepository extends CrudRepository<Product, Integer> {
             List<Product> findAllByPrice( @Param("max") double max);
     @Query(value = "select p from Product p where p.category.categoryId = :categoryId")
     List<Product>findAllByCategory(@Param("categoryId")int categoryId);
-    @Query(value = "select p from Product p where ( p.name like '%:name%') or (p.startPrice between 100 and :max) or (p.category.categoryId = :categoryId)")
+    @Query(value = "select p from Product p where ( p.name like '%:name%') or (p.startPrice between  100 and :max) or (p.category.categoryId = :categoryId)")
     List<Product> findAllByAll(@Param("name")String name,@Param("max") double max,@Param("categoryId") int categoryId);
 }

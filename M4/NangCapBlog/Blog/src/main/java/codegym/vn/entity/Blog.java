@@ -1,6 +1,11 @@
 package codegym.vn.entity;
 
-import javax.persistence.*;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Blog {
@@ -10,6 +15,7 @@ private String header;
 private String author;
 @ManyToOne
 @JoinColumn(name = "category_id",referencedColumnName = "category_id")
+@JsonBackReference
 private Category category;
 private String hastag;
 private String content;

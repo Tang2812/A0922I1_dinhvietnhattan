@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List Content</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<a href="/create">
+    <button class="btn btn-primary">Create</button>
+</a>
+<form action="/find" method="get">
+<span>Title</span>
+<input type="text" name="title">
+    <input type="submit" value="Search4">
+</form>
+<form action="/find1" method="get">
+    <span style="color: red">Loai Cau Hoi</span>: <select name="Type">
+    <option value="">---</option>
+    <option th:each="t: ${types}" th:value="${t.idQT}"
+            th:text="${t.nameQT}"></option>
+</select>
+    <input type="submit" value="Search4">
+</form>
+
+<table class="table">
+    <tr>
+        <th>STT</th>
+        <th>Tieu De</th>
+        <th>Loai cau hoi</th>
+        <th>Ngay dang</th>
+        <th>Tinh trang</th>
+        <th>Tinh nang</th>
+    </tr>
+    <tr th:each="c:${listContent}" th:object="${c}">
+        <td th:text="*{id}"></td>
+        <td th:text="*{title}"></td>
+        <td th:text="*{questionType.getNameQT()}"></td>
+        <td th:text="*{dateCreate}"></td>
+        <td th:text="*{status}"></td>
+        <td>
+            <a th:href="@{/detail(id=*{id})}">
+                <button class="btn btn-primary">Detail</button>
+            </a>
+            <a th:href="@{/delete(id=*{id})}">
+                <button class="btn btn-danger">Delete</button>
+            </a>
+        </td>
+    </tr>
+</table>
+<a th:if="${listContent.hasPrevious()}" th:href="@{?page=__${listContent.number-1}__}">Previous</a>
+<span th:text="${listContent.number+1}"></span>
+<span>...</span>
+<span th:text="${listContent.totalPages}"></span>
+<a th:if="${listContent.hasNext()}" th:href="@{?page=__${listContent.number+1}__}">Next</a>
+</body>
+</html>
