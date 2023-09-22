@@ -4,26 +4,27 @@ export function Count() {
     const [tmp1, setTmp1] = useState(0);
     const [tmp2, setTmp2] = useState(0);
     const [number1, setNumber1] = useState(0);
-    const [number2, setNumber2] = useState(0);
-    const count1 = () => {
-        setTmp1(prevState => prevState + 1);
+    const count =(value)  => {
+        setNumber1(value);
     }
-    const count2 = () => {
-        setTmp2(prevState => prevState + 2);
-    }
+
     useEffect(() => {
-        setNumber1(tmp1);
-        setNumber2(tmp2);
-    }, [tmp1, tmp2])
+        if(number1===1) {
+            setTmp1(prevState => prevState + 1);
+        }
+        if(number1===2) {
+            setTmp2(prevState => prevState + 2);
+        }
+    },[number1])
     return (
         <div>
-            Count: {number1}
+            Count: {tmp1}
             <br/>
-            <button onClick={count1}>Add 1</button>
+            <button onClick={e=>{count(1)}}>Add 1</button>
             <br/>
-            Count: {number2}
+            Count: {tmp2}
             <br/>
-            <button onClick={count2}>Add 2</button>
+            <button  onClick={e=>{count(1)}}>Add 2</button>
         </div>
     )
 }
