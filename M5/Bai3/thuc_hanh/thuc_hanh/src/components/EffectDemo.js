@@ -7,7 +7,7 @@ let [selected,setSelected]= useState("0");
     const choice = e => {
         setSelected(e.target.value);
     };
-    useEffect(()=>{
+    useEffect( ()=>{
         switch (selected) {
             case "0":
                 setValueSelected("Java");
