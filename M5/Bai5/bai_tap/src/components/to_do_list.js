@@ -16,7 +16,7 @@ export function To_do_list() {
         }
 
         fetchApi();
-    }, []);
+    }, [listWork]);
     return (
         <>
             <Formik initialValues={{

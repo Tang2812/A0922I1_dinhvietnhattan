@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import axios from "axios";
 import {Field, Form, Formik} from "formik";
 import * as bookService from "../service/BookService"
+import {NavLink} from "react-router-dom";
 
 export function ListBook() {
     const [bookList, setBookList] = useState([])
@@ -15,7 +16,7 @@ export function ListBook() {
     return (
         <>
             <h1>Library</h1>
-
+<NavLink to='/create' className='btn btn-primary'>Create</NavLink>
             <table className='table'>
                 <thead>
                 <tr>
@@ -31,8 +32,8 @@ export function ListBook() {
                             <td>{book.title}</td>
                             <td>{book.quantity}</td>
                             <td>
-                                <a href="#"><button className='btn btn-danger'>Delete</button></a>
-                                <a href="#"><button className='btn btn-primary' >Update</button></a>
+                                <NavLink to={`/update/${book.id}`} className="btn btn-primary">Edit</NavLink>
+                                <NavLink to={`/delete/${book.id}`} className='btn btn-danger'>Delete</NavLink>
                             </td>
                         </tr>
                     ))

@@ -24,3 +24,19 @@ export const detail= async (id)=>{
         console.log(e);
     }
 }
+export const update= async (id,book)=>{
+    try {
+        const result = await axios.put("http://localhost:8000/book/"+id,book)
+        return result.data;
+    } catch (e) {
+        console.log(e);
+    }
+}
+export const Delete= async (id)=>{
+    try {
+        const result = await axios.delete("http://localhost:8000/book/"+id)
+        return result.data;
+    } catch (e) {
+        console.log(e);
+    }
+}
