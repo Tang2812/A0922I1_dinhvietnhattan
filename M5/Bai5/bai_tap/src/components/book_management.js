@@ -3,8 +3,11 @@ import axios from "axios";
 import {Field, Form, Formik} from "formik";
 import * as bookService from "../service/BookService"
 import {NavLink} from "react-router-dom";
+import {useNavigate} from "react-router-dom"
+
 
 export function ListBook() {
+    const navigate = useNavigate();
     const [bookList, setBookList] = useState([])
     useEffect(() => {
         const fetchApi = async () => {
@@ -12,11 +15,17 @@ export function ListBook() {
             setBookList(result)
         }
         fetchApi();
-    }, []);
+    }, [bookList]);
+
+    const deleteBook = async (id) => {
+        const result = await bookService.Delete(id);
+        navigate("/");
+    }
+
     return (
         <>
             <h1>Library</h1>
-<NavLink to='/create' className='btn btn-primary'>Create</NavLink>
+            <NavLink to='/create' className='btn btn-primary'>Create</NavLink>
             <table className='table'>
                 <thead>
                 <tr>
@@ -33,7 +42,7 @@ export function ListBook() {
                             <td>{book.quantity}</td>
                             <td>
                                 <NavLink to={`/update/${book.id}`} className="btn btn-primary">Edit</NavLink>
-                                <NavLink to={`/delete/${book.id}`} className='btn btn-danger'>Delete</NavLink>
+                                <button onClick={fn => deleteBook(book.id)} className='btn btn-danger'>Delete</button>
                             </td>
                         </tr>
                     ))
