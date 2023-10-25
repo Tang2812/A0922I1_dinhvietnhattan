@@ -13,7 +13,8 @@ export function Update() {
         title: '',
         quantity: ''
     })
-    useEffect(async () => {
+
+    async function getBookById() {
         try {
             const value = await bookService.detail(id);
             if (value) {
@@ -22,8 +23,14 @@ export function Update() {
         } catch (e) {
             console.log(e)
         }
+    }
+
+    useEffect(() => {
+        getBookById()
     }, [])
-    return (
+
+    return book.title !== "" ? (
+
         <Formik initialValues={{
             id: book.id,
             title: book.title,
@@ -32,7 +39,7 @@ export function Update() {
                 onSubmit={(values) => {
                     const update = async (book) => {
 
-                            const result = await bookService.update(id, book)
+                        const result = await bookService.update(id, book)
 
                         navigate('/');
 
@@ -44,17 +51,14 @@ export function Update() {
                 <h1>Update Book</h1>
                 <Form>
                     <table className='table'>
-                        {/*<tr>*/}
-                        {/*    <td>ID</td>*/}
-                        {/*    <Field type='text' name='id'></Field>*/}
-                        {/*</tr>*/}
+
                         <tr>
                             <td>Title</td>
-                            <Field type='text' name='title' ></Field>
+                            <Field type='text' name='title'/>
                         </tr>
                         <tr>
                             <td>Quantity</td>
-                            <Field type='text' name='quantity'></Field>
+                            <Field type='text' name='quantity'/>
                         </tr>
                     </table>
                     <button type='submit' className='btn btn-primary'>Add</button>
@@ -62,5 +66,5 @@ export function Update() {
             </div>
 
         </Formik>
-    )
+    ) : ""
 }
