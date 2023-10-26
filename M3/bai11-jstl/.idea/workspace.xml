@@ -1,64 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ced6a80f-3e91-4e69-8b52-5c323f3e7378" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/bai2-jstl/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai2-jstl/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai2-jstl/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai2-jstl/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai2-jstl/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai2-jstl/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai2-jstl/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai2-jstl/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai2-jstl/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai2-jstl/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai2-jstl/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/.idea/webContexts.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/java/controller/CustomerServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/java/model/customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/java/reponsitory/ICustomerReponsitory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/java/reponsitory/customerRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/java/service/CustomerServiceempl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/java/service/ICustomerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/resources/META-INF/beans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/customer/list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/css/bootstrap-grid.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/css/bootstrap-grid.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/css/bootstrap-reboot.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/css/bootstrap-reboot.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/img/avatar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/img/avatar_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/img/avatar_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/img/avatar_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/img/avatar_4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/img/no_photo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/js/bootstrap.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/js/bootstrap.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/js/bootstrap.bundle.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/js/bootstrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10/src/main/webapp/static/js/bootstrap.min.js.map" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../M5/Bai4/.idea/Bai4.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai12-MVC/.gradle/7.5.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../bai12-MVC/.gradle/7.5.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai12-MVC/.gradle/7.5.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../bai12-MVC/.gradle/7.5.1/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai12-MVC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bai12-MVC/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../M5/Bai3/thuc_hanh/thuc_hanh/src/components/EffectDemo.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../M5/Bai3/thuc_hanh/thuc_hanh/src/components/EffectDemo.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +19,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2OHtI89XH8fuAy0cA2sP3er35hz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -79,7 +34,11 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/codeGym/A09/A0922I1_dinhvietnhattan/M3/bai11-jstl"
+    "last_opened_file_path": "C:/codeGym/A09/A0922I1_dinhvietnhattan/M3/bai11-jstl",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -91,6 +50,7 @@
       <option name="presentableId" value="Default" />
       <updated>1681229257630</updated>
       <workItem from="1681229259107" duration="182000" />
+      <workItem from="1695659163661" duration="1857000" />
     </task>
     <servers />
   </component>

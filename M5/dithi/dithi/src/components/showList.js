@@ -28,15 +28,15 @@ export function ShowList() {
 
     }
     //==========================Search===================================
-    useEffect(()=>{
-        const searchAll=()=>{
-            const result=products.filter((product)=>
-                product.name.toLowerCase().includes(search.toLowerCase()) || product.quantity.includes(search)
-            );
-            setProductsSearch(result);
-        }
-        searchAll();
-    },[search,products])
+        useEffect(()=>{
+            const searchAll=()=>{
+                const result=products.filter((product)=>
+                    product.name.toLowerCase().includes(search.toLowerCase()) || product.quantity.includes(search)
+                );
+                setProductsSearch(result);
+            }
+            searchAll();
+        },[search,products])
     return (
         <>
 

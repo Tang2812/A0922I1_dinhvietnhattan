@@ -5,15 +5,18 @@ import {Route, Routes} from "react-router-dom"
 
 import 'react-toastify/dist/ReactToastify.css'
 import {ToastContainer} from "react-toastify";
-import {ShowProductList} from "./components/productList";
-import {ShowCustomerList} from "./components/customerList";
+import {ShowList} from "./components/showList";
+import {CreateProduct} from "./components/create";
+
+
 function App() {
   return (
 <>
-  <Routes>
-    <Route path="/" element={<ShowProductList></ShowProductList>}></Route>
-    <Route path="/Customer" element={<ShowCustomerList></ShowCustomerList>}></Route>
-  </Routes>
+<Routes>
+<Route path="/" element={<ShowList></ShowList>}></Route>
+<Route path="/Create" element={<CreateProduct></CreateProduct>}></Route>
+</Routes>
+  <ToastContainer/>
 </>
   );
 }

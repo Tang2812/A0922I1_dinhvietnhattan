@@ -5,30 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d15f1c5a-4507-4858-89aa-d0c4805026a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../M2/bai2/src/bai_test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bai12_2-MVC/bai2_new/src/main/java/repository/DBConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai11-jstl/bai2-jstl/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bai11-jstl/bai2-jstl/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../M5/Bai4/.idea/Bai4.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/CustomerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/controller/CustomerServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/reponsitory/ICustomerReponsitory.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/reponsitory/ICustomerReponsitory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/reponsitory/customerRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/reponsitory/customerRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/service/CustomerServiceempl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/service/CustomerServiceempl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/service/ICustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/service/ICustomerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/bai10-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/bai10-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/CustomerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reponsitory/ICustomerReponsitory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reponsitory/ICustomerReponsitory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reponsitory/customerRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reponsitory/customerRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/CustomerServiceempl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/CustomerServiceempl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/ICustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/ICustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/customer/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/customer/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../M5/Bai3/thuc_hanh/thuc_hanh/src/components/EffectDemo.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../M5/Bai3/thuc_hanh/thuc_hanh/src/components/EffectDemo.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +89,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/codeGym/A09/A0922I1_dinhvietnhattan/M3/bai12_2-MVC/bai2_new",
+    "last_opened_file_path": "C:/codeGym/A09/A0922I1_dinhvietnhattan/M3/bai12-MVC",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -292,6 +272,7 @@
       <workItem from="1681738878491" duration="2488000" />
       <workItem from="1681903400969" duration="7219000" />
       <workItem from="1682301816114" duration="333000" />
+      <workItem from="1695635757027" duration="567000" />
     </task>
     <servers />
   </component>
