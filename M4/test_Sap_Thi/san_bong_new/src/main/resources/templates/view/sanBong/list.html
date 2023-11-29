@@ -76,10 +76,13 @@
         <td th:text="*{khungGioChoThue.getKhung_gio()}"></td>
         <td>
             <a th:href="@{/detail(id=*{id})}">
-                <button class="btn btn-primary">Detail</button>
+                <button class="btn btn-info">Detail</button>
             </a>
             <a th:href="@{/delete(id=*{id})}">
-                <button class="btn btn-danger">delete</button>
+                <button class="btn btn-danger">Delete</button>
+            </a>
+            <a th:href="@{/update(id=*{id})}">
+                <button class="btn btn-primary">Update</button>
             </a>
         </td>
     </tr>

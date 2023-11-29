@@ -138,4 +138,29 @@ public class controller {
         sanBongService.delete(id);
         return "redirect:";
     }
+    @GetMapping("/update")
+    String showUpdate(@RequestParam("id") Integer id, Model model) {
+        model.addAttribute("sanBong", sanBongService.findById(id));
+        model.addAttribute("listkhunggio", khungGioChoThueService.findAll());
+        model.addAttribute("listSan", loaiSanService.findAll());
+        model.addAttribute("listKhuVuc", khuVucService.findAll());
+        return "/view/sanBong/update";
+    }
+    @PostMapping("/update")
+    String doUpdate(@Valid @ModelAttribute("sanBong") SanBong sanBong,
+                    BindingResult bindingResult
+            , Model model) {
+        SanBongValidate sanBongValidate = new SanBongValidate();
+        sanBongValidate.setSanBongList(this.sanBongService.findAllList());
+        sanBongValidate.validate(sanBong,bindingResult);
+        if (bindingResult.hasErrors()){
+            model.addAttribute("sanBong", sanBongService.findById(sanBong.getId()));
+            model.addAttribute("listkhunggio", khungGioChoThueService.findAll());
+            model.addAttribute("listSan", loaiSanService.findAll());
+            model.addAttribute("listKhuVuc", khuVucService.findAll());
+            return "/view/sanBong/update";
+        }
+        sanBongService.save(sanBong);
+        return "redirect:";
+    }
 }
