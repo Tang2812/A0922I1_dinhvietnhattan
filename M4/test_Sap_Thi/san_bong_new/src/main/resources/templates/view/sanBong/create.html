@@ -8,32 +8,35 @@
 </head>
 <body>
 <h1 style="color: aqua">Tao moi 1 San Bong</h1>
-<form action="/create" method="post" th:object="${sanBong}" class="form">
-    <table >
+<form action="/sanBong/create" method="post" th:object="${sanBong}" class="form">
+    <table>
         <tr>
             <td>Name</td>
             <td>
-                <input type="text"  th:field="*{name}">
-                <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+                <input type="text" th:field="*{name}">
             </td>
-
+            <td>
+                <span style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+            </td>
         </tr>
         <tr>
             <td>Dia chi</td>
             <td>
-                <input type="text"  th:field="*{diaChi}">
-                    <span th:if="${#fields.hasErrors('diaChi')}" th:errors="*{diaChi}"></span>
+                <input type="text" th:field="*{diaChi}">
+            </td>
+            <td>
+                <span style="color: red" th:if="${#fields.hasErrors('diaChi')}" th:errors="*{diaChi}"></span>
             </td>
         </tr>
-<tr>
-    <td>Khu Vuc</td>
-    <td>
-    <select th:field="*{khuVuc.idKhuVuc}">
-    <option th:each="k: ${listKhuVuc}" th:value="${k.idKhuVuc}"
-            th:text="${k.ten_khu_vuc}"></option>
-    </select>
-</td>
-</tr>
+        <tr>
+            <td>Khu Vuc</td>
+            <td>
+                <select th:field="*{khuVuc.idKhuVuc}">
+                    <option th:each="k: ${listKhuVuc}" th:value="${k.idKhuVuc}"
+                            th:text="${k.ten_khu_vuc}"></option>
+                </select>
+            </td>
+        </tr>
         <tr>
             <td>Loai San</td>
             <td>

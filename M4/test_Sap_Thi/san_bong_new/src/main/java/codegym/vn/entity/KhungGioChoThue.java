@@ -1,6 +1,9 @@
 package codegym.vn.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
 import java.util.List;
 
 @Entity
@@ -8,7 +11,11 @@ public class KhungGioChoThue {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_khung_gio;
+@NotBlank(message = "khong duoc de trong")
     private String khung_gio;
+    @NotBlank(message = "khong duoc de trong")
+    @Min(10)
+    @Max(1000)
     private Integer gia;
 @OneToMany(mappedBy = "khungGioChoThue")
     List<SanBong> sanBongList;

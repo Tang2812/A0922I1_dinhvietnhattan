@@ -1,6 +1,9 @@
 package codegym.vn.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.util.List;
 
 @Entity
@@ -8,6 +11,9 @@ public class KhuVuc {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idKhuVuc;
+    @NotBlank(message = "khong duoc de trong")
+    @Size(min = 5,message = "ten qua ngan")
+    @Size(max = 20,message = "ten qua dai")
     private String ten_khu_vuc;
 
 

@@ -1,16 +1,26 @@
 package codegym.vn.entity;
 
+import com.sun.istack.NotNull;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 @Entity
 public class KhachHang {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private   Integer id_khach_hang;
+    @NotBlank(message = "Ten khach hang khong duoc de trong")
+    @Size(min = 5,message = "ten qua ngan")
+    @Size(max = 20,message = "ten qua dai")
     private String ten_khach_hang;
+    @NotBlank(message = "So dien thoai khong duoc de trong")
+    @Pattern(regexp = "\\(?([0-9]{3})\\)?([ .-]?)([0-9]{3})\\2([0-9]{4})",message = "So dien thoai khong hop le")
     private String soDienThoai;
     private String gioiTinh;
 

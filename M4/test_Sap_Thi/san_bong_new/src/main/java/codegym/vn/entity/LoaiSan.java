@@ -1,6 +1,8 @@
 package codegym.vn.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.util.List;
 
 @Entity
@@ -8,6 +10,9 @@ public class LoaiSan {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idLoaiSan;
+    @NotBlank(message = "khong duoc de trong")
+    @Size(min = 5,message = "ten loai san qua ngan")
+    @Size(max = 20,message = "ten loai san qua dai")
     private String nameLoaiSan;
 
     @OneToMany  (mappedBy = "loaiSan")

@@ -2,6 +2,7 @@ package codegym.vn.entity;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 @Entity
 public class SanBong {
@@ -9,6 +10,8 @@ public class SanBong {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
    @NotBlank(message = "Ten khong duoc de trong")
+   @Size(min = 5,message = "ten qua ngan")
+   @Size(max = 20,message = "ten qua dai")
     private String name;
    @NotBlank(message = "Dia chi khong duoc de trong")
     private String diaChi;

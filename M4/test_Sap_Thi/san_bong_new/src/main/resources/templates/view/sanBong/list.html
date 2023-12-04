@@ -12,34 +12,13 @@
     <h1 style="color: cornflowerblue">Danh Sách Sân Bóng</h1>
 
 <div style="float: right">
-    <a href="/create">
+    <a href="/sanBong/create">
         <button class="btn btn-primary">Create New Stadium</button>
     </a>
 </div>
 
-<!--<form th:action="@{/searchName}" method="get">-->
-<!--  <span style="color: red">Name</span>-->
-<!--  <input type="text" name="name" th:value="${name !=null? name: ''}">-->
-<!--  <button type="submit" class="btn btn-primary">Tim Kiem</button>-->
-<!--</form>-->
-<!--<br>-->
-<!--<form th:action="@{/searchKhuVuc}" method="get" >-->
-<!--    <span style="color: red">Khu Vuc</span>:   <select name="id_khu_vuc">-->
-<!--    <option th:each="k: ${listKhuVuc}" th:value="${k.idKhuVuc}"-->
-<!--            th:text="${k.ten_khu_vuc}"></option>-->
-<!--</select>-->
-<!--    <input type="submit" value="Search3">-->
-<!--</form>-->
-<!--<br>-->
-<!--<form th:action="@{/searchLoaiSan}" method="get" >-->
-<!--  <span style="color: red">Loai San</span>:   <select name="id_loai_san">-->
-<!--  <option th:each="l:${listSan}" th:value="${l.idLoaiSan}"-->
-<!--          th:text="${l.nameLoaiSan}"></option>-->
-<!--</select>-->
-<!--  <input type="submit" value="Search4">-->
-<!--</form>-->
 <br>
-<form th:action="@{/findByAll}" method="get">
+<form th:action="@{/sanBong/findByAll}" method="get">
     <span style="color: red">Name</span>
     <input type="text" name="name">
     <span style="color: red">Khu Vuc</span>: <select name="id_khu_vuc">
@@ -75,13 +54,13 @@
         <td th:text="*{loaiSan.nameLoaiSan}"></td>
         <td th:text="*{khungGioChoThue.getKhung_gio()}"></td>
         <td>
-            <a th:href="@{/detail(id=*{id})}">
+            <a th:href="@{/sanBong/detail(id=*{id})}">
                 <button class="btn btn-info">Detail</button>
             </a>
-            <a th:href="@{/delete(id=*{id})}">
+            <a th:href="@{/sanBong/delete(id=*{id})}">
                 <button class="btn btn-danger">Delete</button>
             </a>
-            <a th:href="@{/update(id=*{id})}">
+            <a th:href="@{/sanBong/update(id=*{id})}">
                 <button class="btn btn-primary">Update</button>
             </a>
         </td>
