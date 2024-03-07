@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/bootstrap520/css/bootstrap.css}">
+    <script th:src="@{/bootstrap520/js/bootstrap.js}"></script>
+    <script th:src="@{/jquery/jquery-3.6.0.min.js}"></script>
+    <script>
+        function displayToast(message,backgroundColor,textColor) {
+            document.getElementById("toastContent").innerText = message;
+            document.getElementById("liveToast").style.background = backgroundColor;
+            document.getElementById("liveToast").style.color = textColor;
+            let myAlert = document.getElementById('liveToast');//select id of toast
+            let bsAlert = new bootstrap.Toast(myAlert);//inizialize it
+            bsAlert.show();//show it
+        }
+    </script>
+</head>
+<body>
+<div th:replace="~{layout::head}"></div>
+<h1>Trang danh sách</h1>
+<button type="button" class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModalAdd"
+>
+    Add by Modal and Ajax
+</button><br>
+
+<a th:href ="@{/student/create}">Thêm mới</a>
+<form action="/student" method="get">
+    <input name="searchName" th:value="${searchName}">
+    <button>Search</button>
+</form>
+
+<table class="table table-striped">
+    <tr>
+        <th>STT</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Detail1</th>
+        <th>Detail2</th>
+        <th>Detail3</th>
+    </tr>
+
+    <tr th:each="student,status: ${studentPages}">
+        <td th:text="${status.count}"></td>
+        <td th:text="${student.id}" ></td>
+        <td th:text="${student.name}" ></td>
+        <td th:switch="${student.gender}">
+            <span th:case="1" th:text="Nam"></span>
+            <span th:case="0" th:text="Nữ"></span>
+            <span th:case="*" th:text="LGBT"></span>
+        </td>
+        <td><a th:href="@{/student/detail(id=${student.id})}">Detail1/RequestParam</a></td>
+        <td><a th:href="@{/student/detail/{id}(id=${student.id})}">Detail2/PathVariable</a></td>
+        <td>
+            <button type="button" class="btn btn-primary"
+                    th:attr="onclick=|showInfoView(${student.id})|"
+            >
+                View
+            </button>
+        </td>
+        <td>
+            <button type="button" class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                    th:attr="onclick=|showInfo(${student.id},'${student.name}')|"
+            >
+                Delete
+            </button>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="5" th:if="${studentPages.isEmpty()}">
+            Danh sách trống
+        </td>
+    </tr>
+</table>
+<a th:if="${studentPages.hasPrevious()}" th:href="@{/student(page=${studentPages.number-1},searchName=${searchName})}">Previous</a>
+<span th:text="${studentPages.number+1}"></span>/
+<span th:text="${studentPages.totalPages}"></span>
+<a th:if="${studentPages.hasNext()}" th:href="@{/student(page=${studentPages.number+1},searchName=${searchName})}">Next</a>
+<div th:insert="~{layout::foot}"></div>
+
+<!-- Modal Delete -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...Delete??????????
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--View-->
+<div class="modal fade" id="exampleModalView" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabelView">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <from>
+                <div class="modal-body">
+                    <p id="detail-name"></p>
+                    ...View??????????????????
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button onclick="add()" type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </from>
+
+        </div>
+    </div>
+</div>
+
+<!--Add-->
+<div class="modal fade" id="exampleModalAdd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabelAdd">Thêm mới</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...Add??????????????????
+                    Name
+                    <input type="text" id="name"><br>
+                    <small id="error-name" style="color: red"></small><br>
+                    Gender
+                    <select id="gender">
+                        <option value="1">Nam</option>
+                        <option value="1">Nữ</option>
+                        <option value="-1">LGBT</option>
+                    </select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" onclick="add()" class="btn btn-secondary" data-bs-dismiss="modal">Save</button>
+<!--                <button type="button"  onclick="add()" class="btn btn-primary">Save changes</button>-->
+            </div>
+        </div>
+    </div>
+</div>
+<!--toast-->
+<div class="position-fixed top-0 end-5 p-3" style="z-index: 11;margin-left: 500px">
+    <div id="liveToast" style="width: 230px; color: white; background:lightgreen ;border-radius:20%/20%;" class="toast"
+         role="dialog" aria-live="assertive" aria-atomic="true">
+        <div class="toast-body">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30px" height="30px">
+                <g id="surface1_4_">
+                    <path style="fill:#4CAF50;"
+                          d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"/>
+                    <path style="fill:#CCFF90;"
+                          d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"/>
+                </g>
+            </svg>
+            <span id="toastContent">Nội dung hiển thị</span>
+        </div>
+    </div>
+</div>
+<script>
+    function showInfo(id,name){
+        alert(id +": "+ name)
+    }
+    function showInfoView(id){
+        $.ajax({
+            contentType: 'application/json',
+            method: 'GET',
+            url:`http://localhost:8080/api/student/detail?id=${id}`,
+            success: function (data){
+                console.log(data)
+                $("#detail-name").html(data.name);
+                $('#exampleModalView').modal('show');
+            }
+        })
+    }
+
+    function add(){
+        let name =$("#name").val();
+        let gender =$("#gender").val();
+        let student = {
+            name: name,
+            gender: gender,
+            classRoom: {
+                id: 1
+            }
+        }
+        alert("send")
+        $.ajax({
+            contentType: "application/json",
+            method: "POST",
+            dataType: "json",
+            data: JSON.stringify(student),
+            url: "http://localhost:8080/api/student",
+            complete: function (data) {
+                console.log(data)
+                console.log(data.status)
+                console.log(data.responseJSON)
+                if (data.status==400){
+                    $("#error-name").html(data.responseJSON.name);
+                    $('#exampleModalAdd').modal('show');
+                }else {
+                    displayToast("Thêm mới thành công","green","yellow");
+                }
+            }
+        })
+
+    }
+</script>
+</body>
+</html>

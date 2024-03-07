@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 style="color: brown">Detail of a great blog</h1>
+<table th:object="${blog}" >
+  <tr>
+    <td>Id </td>
+    <td th:text="*{id}"></td>
+  </tr>
+  <tr>
+    <td>Athor </td>
+    <td th:text="*{author}"></td>
+  </tr>
+  <tr>
+    <td>Header </td>
+    <td th:text="*{header}"></td>
+  </tr>
+  <tr>
+    <td>Category </td>
+    <td th:text="*{category.categoryName}"></td>
+  </tr>
+  <tr>
+    <td>Hastag </td>
+    <td th:text="*{hastag}"></td>
+  </tr>
+  <tr>
+    <td>Content </td>
+    <td th:text="*{content}"></td>
+  </tr>
+  <tr>
+    <td>
+    <a th:href="@{/blogs}">
+      <button>Back</button>
+    </a>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

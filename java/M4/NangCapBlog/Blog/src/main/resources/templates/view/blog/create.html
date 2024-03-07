@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 style="color: blueviolet">Write your blog</h1>
+<form action="/blogs" method="post">
+<table th:object="${newBlog}">
+<tr>
+  <td>Id</td>
+  <td>
+    <input type="text" th:field="*{id}">
+  </td>
+  </tr>
+  <tr>
+  <td>Author</td>
+  <td>
+    <input type="text" th:field="*{author}">
+  </td>
+  </tr>
+  <tr>
+  <td>Hastag</td>
+  <td>
+    <input type="text" th:field="*{hastag}">
+  </td>
+    </tr>
+  <tr>
+    <td>Category</td>
+    <td>
+      <select  th:field="*{category.categoryId}" >
+<option th:each="c: ${category}" th:value="${c.categoryId}" th:text="${c.categoryName}"></option>
+      </select>
+<!--      <input type="text" th:field="*{hastag}">-->
+    </td>
+  </tr>
+  <tr>
+  <td>Header</td>
+  <td>
+    <input type="text" th:field="*{header}">
+  </td>
+    </tr>
+  <tr>
+  <td>Content</td>
+  <td>
+    <input type="text" th:field="*{content}">
+  </td>
+</tr>
+  <tr>
+    <td><input type="reset" value="Reset"></td>
+    <td><input type="submit" value="Register"></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>
