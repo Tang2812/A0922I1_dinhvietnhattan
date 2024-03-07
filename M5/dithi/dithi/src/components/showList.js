@@ -4,12 +4,14 @@ import * as categoryService from "../Category_service/categoryService"
 import {NavLink} from "react-router-dom";
 import {toast} from "react-toastify";
 import {useNavigate} from "react-router-dom"
+
 export function ShowList() {
-    const navigate=useNavigate()
-    const [search,setSearch]=useState("")
-    const [productsSearch,setProductsSearch]= useState([])
+    const navigate = useNavigate()
+    const [search, setSearch] = useState("")
+    const [productsSearch, setProductsSearch] = useState([])
     const [products, setProducts] = useState([]);
     const [categories, setCategories] = useState([]);
+    const [listAdd, setListAdd] = useState([]);
     useEffect(() => {
         const fetchApi = async () => {
             const products = await productService.findAll();
@@ -25,18 +27,31 @@ export function ShowList() {
         const result = await productService.deleteProduct(id);
         toast("🐈Delete success!!!!")
         navigate("/")
-
     }
+
+////////////////////////////////////////////////
+    function removeProduct(prodduct) {
+        setListAdd(listAdd.filter(item => item !== prodduct))
+    }
+
+    ////////////////////////////////////////////////////
+    function addProduct(product) {
+        // console.log(product)
+        setListAdd(prevState => [...prevState, product])
+    }
+
     //==========================Search===================================
-        useEffect(()=>{
-            const searchAll=()=>{
-                const result=products.filter((product)=>
-                    product.name.toLowerCase().includes(search.toLowerCase()) || product.quantity.includes(search)
-                );
-                setProductsSearch(result);
-            }
-            searchAll();
-        },[search,products])
+    useEffect(() => {
+        const searchAll = () => {
+            const result = products.filter((product) =>
+                product.name.toLowerCase().includes(search.toLowerCase()) || product.quantity.includes(search)
+            );
+            setProductsSearch(result);
+        }
+        searchAll();
+    }, [search, products])
+
+
     return (
         <>
 
@@ -45,7 +60,9 @@ export function ShowList() {
             </h1>
             <form>
                 <input type="text" placeholder="Search" value={search}
-                onChange={(e)=>{setSearch(e.target.value)}}/>
+                       onChange={(e) => {
+                           setSearch(e.target.value)
+                       }}/>
             </form>
             <table className="table">
                 <thead>
@@ -71,9 +88,40 @@ export function ShowList() {
                         <td>
                             <NavLink to={`/edit/${product.id}`} className="btn btn-primary"> Edit</NavLink>
                             <button onClick={fn => deleteProduct(product.id)} className='btn btn-danger'>Delete</button>
+                            <button onClick={fn => addProduct(product)} className='btn btn-success'>Add</button>
                         </td>
                     </tr>
 
+                ))}
+                </tbody>
+            </table>
+            <table className="table">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Category</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                {listAdd.map(product => (
+                    <tr key={product.id}>
+                        <td>{product.id}</td>
+                        <td>{product.name}</td>
+                        <td>{product.quantity}</td>
+                        <td>{
+                            categories.find(category => String(category.id) === String(product.category))?.nameCategory
+                        }</td>
+                        <td>{product.status}</td>
+                        <td>
+                            <button onClick={fn => removeProduct(product)} className='btn btn-outline-danger'>Remove
+                            </button>
+                        </td>
+
+                    </tr>
                 ))}
                 </tbody>
             </table>
