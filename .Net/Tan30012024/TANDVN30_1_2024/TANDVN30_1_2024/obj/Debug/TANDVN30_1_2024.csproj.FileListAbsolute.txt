@@ -1,0 +1,6 @@
+C:\Thương mại điện tử\.NET\Tan30012024\TANDVN30_1_2024\TANDVN30_1_2024\bin\Debug\TANDVN30_1_2024.exe.config
+C:\Thương mại điện tử\.NET\Tan30012024\TANDVN30_1_2024\TANDVN30_1_2024\bin\Debug\TANDVN30_1_2024.exe
+C:\Thương mại điện tử\.NET\Tan30012024\TANDVN30_1_2024\TANDVN30_1_2024\bin\Debug\TANDVN30_1_2024.pdb
+C:\Thương mại điện tử\.NET\Tan30012024\TANDVN30_1_2024\TANDVN30_1_2024\obj\Debug\TANDVN30_1_2024.csproj.CoreCompileInputs.cache
+C:\Thương mại điện tử\.NET\Tan30012024\TANDVN30_1_2024\TANDVN30_1_2024\obj\Debug\TANDVN30_1_2024.exe
+C:\Thương mại điện tử\.NET\Tan30012024\TANDVN30_1_2024\TANDVN30_1_2024\obj\Debug\TANDVN30_1_2024.pdb

@@ -1,0 +1,32 @@
+C:\Users\KHUONG\Desktop\QuanLyXe\QuanLyXe\bin\Debug\QuanLyXe.exe.config
+C:\Users\KHUONG\Desktop\QuanLyXe\QuanLyXe\obj\Debug\QuanLyXe.csprojResolveAssemblyReference.cache
+C:\Users\KHUONG\Desktop\QuanLyXe\QuanLyXe\bin\Debug\QuanLyXe.exe
+C:\Users\KHUONG\Desktop\QuanLyXe\QuanLyXe\bin\Debug\QuanLyXe.pdb
+C:\Users\KHUONG\Desktop\QuanLyXe\QuanLyXe\obj\Debug\QuanLyXe.exe
+C:\Users\KHUONG\Desktop\QuanLyXe\QuanLyXe\obj\Debug\QuanLyXe.pdb
+E:\Giang day\GiangDay_Winform CS_414_SL_Khuong_20170516\CS414 Lectures\Code cho cac Slide\Slide4_QuanLyXe\QuanLyXe\bin\Debug\QuanLyXe.exe.config
+E:\Giang day\GiangDay_Winform CS_414_SL_Khuong_20170516\CS414 Lectures\Code cho cac Slide\Slide4_QuanLyXe\QuanLyXe\obj\Debug\QuanLyXe.exe
+E:\Giang day\GiangDay_Winform CS_414_SL_Khuong_20170516\CS414 Lectures\Code cho cac Slide\Slide4_QuanLyXe\QuanLyXe\obj\Debug\QuanLyXe.pdb
+E:\Giang day\GiangDay_Winform CS_414_SL_Khuong_20170516\CS414 Lectures\Code cho cac Slide\Slide4_QuanLyXe\QuanLyXe\bin\Debug\QuanLyXe.exe
+E:\Giang day\GiangDay_Winform CS_414_SL_Khuong_20170516\CS414 Lectures\Code cho cac Slide\Slide4_QuanLyXe\QuanLyXe\bin\Debug\QuanLyXe.pdb
+E:\Giang day\GiangDay_Winform CS_414_SL_Khuong_20170516\CS414 Lectures\Code cho cac Slide\Slide4_QuanLyXe\QuanLyXe\obj\Debug\QuanLyXe.csprojResolveAssemblyReference.cache
+E:\Giang day\GiangDay_Winform CS_414_SL_Khuong_20170516\CS414 Lectures\Code cho cac Slide\Slide4_QuanLyXe_Chen\QuanLyXe\bin\Debug\QuanLyXe.exe.config
+E:\Giang day\GiangDay_Winform CS_414_SL_Khuong_20170516\CS414 Lectures\Code cho cac Slide\Slide4_QuanLyXe_Chen\QuanLyXe\obj\Debug\QuanLyXe.exe
+E:\Giang day\GiangDay_Winform CS_414_SL_Khuong_20170516\CS414 Lectures\Code cho cac Slide\Slide4_QuanLyXe_Chen\QuanLyXe\obj\Debug\QuanLyXe.pdb
+E:\Giang day\GiangDay_Winform CS_414_SL_Khuong_20170516\CS414 Lectures\Code cho cac Slide\Slide4_QuanLyXe_Chen\QuanLyXe\obj\Debug\QuanLyXe.csprojResolveAssemblyReference.cache
+E:\Giang day\GiangDay_Winform CS_414_SL_Khuong_20170516\CS414 Lectures\Code cho cac Slide\Slide4_QuanLyXe_Chen\QuanLyXe\bin\Debug\QuanLyXe.exe
+E:\Giang day\GiangDay_Winform CS_414_SL_Khuong_20170516\CS414 Lectures\Code cho cac Slide\Slide4_QuanLyXe_Chen\QuanLyXe\bin\Debug\QuanLyXe.pdb
+D:\GiangDay\GiangDay_WinNet\CS464 Lectures\Code cho cac Slide\Slide4_QuanLyXe_Chen\QuanLyXe\bin\Debug\QuanLyXe.exe.config
+D:\GiangDay\GiangDay_WinNet\CS464 Lectures\Code cho cac Slide\Slide4_QuanLyXe_Chen\QuanLyXe\bin\Debug\QuanLyXe.exe
+D:\GiangDay\GiangDay_WinNet\CS464 Lectures\Code cho cac Slide\Slide4_QuanLyXe_Chen\QuanLyXe\bin\Debug\QuanLyXe.pdb
+D:\GiangDay\GiangDay_WinNet\CS464 Lectures\Code cho cac Slide\Slide4_QuanLyXe_Chen\QuanLyXe\obj\Debug\QuanLyXe.csproj.AssemblyReference.cache
+D:\GiangDay\GiangDay_WinNet\CS464 Lectures\Code cho cac Slide\Slide4_QuanLyXe_Chen\QuanLyXe\obj\Debug\QuanLyXe.csproj.CoreCompileInputs.cache
+D:\GiangDay\GiangDay_WinNet\CS464 Lectures\Code cho cac Slide\Slide4_QuanLyXe_Chen\QuanLyXe\obj\Debug\QuanLyXe.exe
+D:\GiangDay\GiangDay_WinNet\CS464 Lectures\Code cho cac Slide\Slide4_QuanLyXe_Chen\QuanLyXe\obj\Debug\QuanLyXe.pdb
+C:\Thương mại điện tử\.NET\Slide4_QuanLyXe_Chen\QuanLyXe\bin\Debug\QuanLyXe.exe.config
+C:\Thương mại điện tử\.NET\Slide4_QuanLyXe_Chen\QuanLyXe\bin\Debug\QuanLyXe.exe
+C:\Thương mại điện tử\.NET\Slide4_QuanLyXe_Chen\QuanLyXe\bin\Debug\QuanLyXe.pdb
+C:\Thương mại điện tử\.NET\Slide4_QuanLyXe_Chen\QuanLyXe\obj\Debug\QuanLyXe.csprojAssemblyReference.cache
+C:\Thương mại điện tử\.NET\Slide4_QuanLyXe_Chen\QuanLyXe\obj\Debug\QuanLyXe.csproj.CoreCompileInputs.cache
+C:\Thương mại điện tử\.NET\Slide4_QuanLyXe_Chen\QuanLyXe\obj\Debug\QuanLyXe.exe
+C:\Thương mại điện tử\.NET\Slide4_QuanLyXe_Chen\QuanLyXe\obj\Debug\QuanLyXe.pdb

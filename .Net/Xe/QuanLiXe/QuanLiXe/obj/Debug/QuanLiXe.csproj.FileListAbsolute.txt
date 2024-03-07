@@ -1,0 +1,7 @@
+C:\Thương mại điện tử\.NET\Xe\QuanLiXe\QuanLiXe\bin\Debug\QuanLiXe.exe.config
+C:\Thương mại điện tử\.NET\Xe\QuanLiXe\QuanLiXe\bin\Debug\QuanLiXe.exe
+C:\Thương mại điện tử\.NET\Xe\QuanLiXe\QuanLiXe\bin\Debug\QuanLiXe.pdb
+C:\Thương mại điện tử\.NET\Xe\QuanLiXe\QuanLiXe\obj\Debug\QuanLiXe.csprojAssemblyReference.cache
+C:\Thương mại điện tử\.NET\Xe\QuanLiXe\QuanLiXe\obj\Debug\QuanLiXe.csproj.CoreCompileInputs.cache
+C:\Thương mại điện tử\.NET\Xe\QuanLiXe\QuanLiXe\obj\Debug\QuanLiXe.exe
+C:\Thương mại điện tử\.NET\Xe\QuanLiXe\QuanLiXe\obj\Debug\QuanLiXe.pdb

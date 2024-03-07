@@ -1,0 +1,7 @@
+C:\Users\admin\Downloads\BaiTapNgay30_1_2024\obj\Debug\BaiTapNgay30_1_2024.csprojAssemblyReference.cache
+C:\Users\admin\Downloads\BaiTapNgay30_1_2024\obj\Debug\BaiTapNgay30_1_2024.csproj.CoreCompileInputs.cache
+C:\Users\admin\Downloads\BaiTapNgay30_1_2024\bin\Debug\BaiTapNgay30_1_2024.exe.config
+C:\Users\admin\Downloads\BaiTapNgay30_1_2024\bin\Debug\BaiTapNgay30_1_2024.exe
+C:\Users\admin\Downloads\BaiTapNgay30_1_2024\bin\Debug\BaiTapNgay30_1_2024.pdb
+C:\Users\admin\Downloads\BaiTapNgay30_1_2024\obj\Debug\BaiTapNgay30_1_2024.exe
+C:\Users\admin\Downloads\BaiTapNgay30_1_2024\obj\Debug\BaiTapNgay30_1_2024.pdb

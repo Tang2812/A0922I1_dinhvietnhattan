@@ -1,0 +1,7 @@
+C:\Thương mại điện tử\.NET\collection\Collection\Collection\bin\Debug\Collection.exe.config
+C:\Thương mại điện tử\.NET\collection\Collection\Collection\bin\Debug\Collection.exe
+C:\Thương mại điện tử\.NET\collection\Collection\Collection\bin\Debug\Collection.pdb
+C:\Thương mại điện tử\.NET\collection\Collection\Collection\obj\Debug\Collection.csprojAssemblyReference.cache
+C:\Thương mại điện tử\.NET\collection\Collection\Collection\obj\Debug\Collection.csproj.CoreCompileInputs.cache
+C:\Thương mại điện tử\.NET\collection\Collection\Collection\obj\Debug\Collection.exe
+C:\Thương mại điện tử\.NET\collection\Collection\Collection\obj\Debug\Collection.pdb

@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="OnTapCuoiKi1.Site1" %>
+<link href="design.css" rel="stylesheet" />
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+                <div class="container">
+                    <div class="categories">
+                        <h2>Danh Muc</h2>
+                        <asp:DataList ID="DataList1" runat="server"  >
+                            <ItemTemplate>
+                                <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("MaDM") %>' Text='<%# Eval("TenDM") %>' OnClick="LinkButton1_Click"></asp:LinkButton>
+                            </ItemTemplate>
+                        </asp:DataList>
+                    </div>
+               
+                <div class="mainContent">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                </div>
+                <div class="loginform">
+                    <asp:Login ID="Login1" runat="server"></asp:Login>
+                </div>
+         </div>
+    </form>
+</body>
+</html>

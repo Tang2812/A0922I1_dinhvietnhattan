@@ -1,0 +1,7 @@
+C:\Thương mại điện tử\.NET\KiemtrChuong2_bai4\Bai4\Bai4\bin\Debug\Bai4.exe.config
+C:\Thương mại điện tử\.NET\KiemtrChuong2_bai4\Bai4\Bai4\bin\Debug\Bai4.exe
+C:\Thương mại điện tử\.NET\KiemtrChuong2_bai4\Bai4\Bai4\bin\Debug\Bai4.pdb
+C:\Thương mại điện tử\.NET\KiemtrChuong2_bai4\Bai4\Bai4\obj\Debug\Bai4.csprojAssemblyReference.cache
+C:\Thương mại điện tử\.NET\KiemtrChuong2_bai4\Bai4\Bai4\obj\Debug\Bai4.csproj.CoreCompileInputs.cache
+C:\Thương mại điện tử\.NET\KiemtrChuong2_bai4\Bai4\Bai4\obj\Debug\Bai4.exe
+C:\Thương mại điện tử\.NET\KiemtrChuong2_bai4\Bai4\Bai4\obj\Debug\Bai4.pdb

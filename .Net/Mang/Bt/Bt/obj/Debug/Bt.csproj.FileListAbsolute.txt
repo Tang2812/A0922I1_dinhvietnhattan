@@ -1,0 +1,7 @@
+C:\Thương mại điện tử\.NET\Mang\Bt\Bt\bin\Debug\Bt.exe.config
+C:\Thương mại điện tử\.NET\Mang\Bt\Bt\bin\Debug\Bt.exe
+C:\Thương mại điện tử\.NET\Mang\Bt\Bt\bin\Debug\Bt.pdb
+C:\Thương mại điện tử\.NET\Mang\Bt\Bt\obj\Debug\Bt.csprojAssemblyReference.cache
+C:\Thương mại điện tử\.NET\Mang\Bt\Bt\obj\Debug\Bt.csproj.CoreCompileInputs.cache
+C:\Thương mại điện tử\.NET\Mang\Bt\Bt\obj\Debug\Bt.exe
+C:\Thương mại điện tử\.NET\Mang\Bt\Bt\obj\Debug\Bt.pdb

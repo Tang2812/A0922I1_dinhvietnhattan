@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication1.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        .container{
+            width:100%;
+            height:100%;
+            display:flex;
+        }
+        .categories{
+            width:15%;
+            float:left;
+            height:auto;
+        }
+        .formLogin{
+            width:30%;
+            float:right;
+            height:auto;
+        }
+        .mainContent{
+            width:55%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="container">
+                <div class="categories">
+                    <asp:DataList ID="DataList1" runat="server">
+                        <ItemTemplate>
+                            <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("MaDM") %>' Text='<%# Eval("TenDM") %>' OnClick="LinkButton1_Click"></asp:LinkButton>
+                        </ItemTemplate>
+                    </asp:DataList>
+                </div>
+                <div class="mainContent">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                     </asp:ContentPlaceHolder>
+                </div>
+                <div class="formLogin">
+                    <asp:Login ID="Login1" runat="server"></asp:Login>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.34112.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnTapCuoiKi1", "OnTapCuoiKi1\OnTapCuoiKi1.csproj", "{684D89D6-A55B-4DCE-9436-C783C59B799F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{684D89D6-A55B-4DCE-9436-C783C59B799F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{684D89D6-A55B-4DCE-9436-C783C59B799F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{684D89D6-A55B-4DCE-9436-C783C59B799F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{684D89D6-A55B-4DCE-9436-C783C59B799F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0EE78BBA-3239-485B-9E8A-134B4F648EE5}
+	EndGlobalSection
+EndGlobal

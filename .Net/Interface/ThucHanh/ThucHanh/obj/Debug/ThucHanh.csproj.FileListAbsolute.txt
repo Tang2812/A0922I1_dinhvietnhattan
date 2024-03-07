@@ -1,0 +1,7 @@
+C:\Thương mại điện tử\.NET\Interface\ThucHanh\ThucHanh\bin\Debug\ThucHanh.exe.config
+C:\Thương mại điện tử\.NET\Interface\ThucHanh\ThucHanh\bin\Debug\ThucHanh.exe
+C:\Thương mại điện tử\.NET\Interface\ThucHanh\ThucHanh\bin\Debug\ThucHanh.pdb
+C:\Thương mại điện tử\.NET\Interface\ThucHanh\ThucHanh\obj\Debug\ThucHanh.csprojAssemblyReference.cache
+C:\Thương mại điện tử\.NET\Interface\ThucHanh\ThucHanh\obj\Debug\ThucHanh.csproj.CoreCompileInputs.cache
+C:\Thương mại điện tử\.NET\Interface\ThucHanh\ThucHanh\obj\Debug\ThucHanh.exe
+C:\Thương mại điện tử\.NET\Interface\ThucHanh\ThucHanh\obj\Debug\ThucHanh.pdb
