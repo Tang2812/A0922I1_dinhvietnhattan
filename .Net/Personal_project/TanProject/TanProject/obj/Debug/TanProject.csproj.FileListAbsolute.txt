@@ -1,0 +1,15 @@
+C:\personalProjectC#\TanProject\TanProject\bin\Debug\Database1.mdf
+C:\personalProjectC#\TanProject\TanProject\bin\Debug\Database1_log.ldf
+C:\personalProjectC#\TanProject\TanProject\bin\Debug\TanProject.exe.config
+C:\personalProjectC#\TanProject\TanProject\bin\Debug\TanProject.exe
+C:\personalProjectC#\TanProject\TanProject\bin\Debug\TanProject.pdb
+C:\personalProjectC#\TanProject\TanProject\obj\Debug\TanProject.csprojAssemblyReference.cache
+C:\personalProjectC#\TanProject\TanProject\obj\Debug\TanProject.frm_quanlisach.resources
+C:\personalProjectC#\TanProject\TanProject\obj\Debug\TanProject.frm_TrangChu.resources
+C:\personalProjectC#\TanProject\TanProject\obj\Debug\TanProject.Properties.Resources.resources
+C:\personalProjectC#\TanProject\TanProject\obj\Debug\TanProject.csproj.GenerateResource.cache
+C:\personalProjectC#\TanProject\TanProject\obj\Debug\TanProject.csproj.CoreCompileInputs.cache
+C:\personalProjectC#\TanProject\TanProject\obj\Debug\TanProject.exe
+C:\personalProjectC#\TanProject\TanProject\obj\Debug\TanProject.pdb
+C:\personalProjectC#\TanProject\TanProject\obj\Debug\TanProject.Frm_dangNhap.resources
+C:\personalProjectC#\TanProject\TanProject\obj\Debug\TanProject.frm_nguoiDoc.resources
