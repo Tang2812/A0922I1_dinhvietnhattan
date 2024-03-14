@@ -1,0 +1,14 @@
+G:\projectNet\projectNet\obj\Debug\projectNet.csprojAssemblyReference.cache
+G:\projectNet\projectNet\obj\Debug\projectNet.frm_HangHoa.resources
+G:\projectNet\projectNet\obj\Debug\projectNet.frm_Main.resources
+G:\projectNet\projectNet\obj\Debug\projectNet.Properties.Resources.resources
+G:\projectNet\projectNet\obj\Debug\projectNet.csproj.GenerateResource.cache
+G:\projectNet\projectNet\obj\Debug\projectNet.csproj.CoreCompileInputs.cache
+G:\projectNet\projectNet\bin\Debug\HANGHOA.mdf
+G:\projectNet\projectNet\bin\Debug\HANGHOA_log.ldf
+G:\projectNet\projectNet\bin\Debug\projectNet.exe.config
+G:\projectNet\projectNet\bin\Debug\projectNet.exe
+G:\projectNet\projectNet\bin\Debug\projectNet.pdb
+G:\projectNet\projectNet\obj\Debug\projectNet.exe
+G:\projectNet\projectNet\obj\Debug\projectNet.pdb
+G:\projectNet\projectNet\obj\Debug\projectNet.frm_DangNhap.resources
