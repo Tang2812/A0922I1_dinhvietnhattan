@@ -1,0 +1,97 @@
+﻿@page "/detail/{id}"
+@using BlazorApp1.Data;
+@using BlazorApp1.Models;
+@using Microsoft.EntityFrameworkCore;
+<h1 style="text-align: center">Detail page </h1>
+
+@using (var db = new HrContext())
+{
+	var mydb = new MydbContext();
+	var item1 = db.Employments.First(a => a.EmploymentId == Convert.ToDecimal(id));
+	var item2= db.Personals.First(a => a.PersonalId == Convert.ToDecimal(id));
+	
+	var item3 = mydb.Employees.First(a => a.IdEmployee == Convert.ToDecimal(id));
+
+	ModelTest item = new ModelTest(item1.EmploymentId, item2.CurrentFirstName, item2.CurrentMiddleName, item2.CurrentLastName, item3.PayRate);
+	
+	<EditForm Model= "item" OnSubmit="@FormSubmitted" FormName="form-1">
+
+
+		<table class="table">
+			<tr>
+				<td>Employee First Name</td>
+				<td>
+					<InputText @bind-Value="@item.FirstName" />
+				</td>
+			</tr>
+			<tr>
+				<td>Employee Middle Name</td>
+				<td>
+					<InputText @bind-Value="@item.MidName" />
+				</td>
+			</tr>
+			<tr>
+				<td>Employee Last Name</td>
+				<td>
+					<InputText @bind-Value="@item.LastName" />
+				</td>
+			</tr>
+			<tr>
+				<td>Employee Payrate</td>
+				<td>
+					<InputSelect @bind-Value="@item.PayRate" >
+						
+						@foreach (var tmp in payRates)
+						{
+							<option value="@tmp.PayRateName">@tmp.PayRateName</option>
+						}
+					</InputSelect>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/"> <button class="btn btn-danger">Exit</button></a>
+				</td>
+				<td>
+					<button class="btn btn-primary" type="submit">Submit</button>
+				</td>
+			</tr>
+		</table>
+	</EditForm>
+}
+@inject HrContext hrcontext;
+@inject MydbContext dbcontext;
+@inject NavigationManager navigationManager;
+@code {
+	[SupplyParameterFromForm]
+	ModelTest item { get; set; }
+	[Parameter]
+	public string id{ set; get; }
+	Dictionary<decimal, Employee> dicEmp = new Dictionary<decimal, Employee>();
+	Dictionary<decimal, Personal> dicPer = new Dictionary<decimal, Personal>();
+	List<Employment> employees = new List<Employment>();
+	List<decimal> listToRemove = new List<decimal>();
+	List<PayRate> payRates = new List<PayRate>();
+	protected override async Task OnInitializedAsync()
+	{		
+		payRates = await dbcontext.PayRates.ToListAsync();
+
+	}
+	void FormSubmitted()
+	{
+		var item1 = hrcontext.Employments.First(a => a.EmploymentId == Convert.ToDecimal(id));
+		var item2 = hrcontext.Personals.First(a => a.PersonalId == Convert.ToDecimal(id));
+
+		var item3 = dbcontext.Employees.First(a => a.IdEmployee == Convert.ToDecimal(id));
+		item2.CurrentFirstName = item.FirstName;
+		item2.CurrentMiddleName = item.MidName;
+		item2.CurrentLastName = item.LastName;
+		item3.PayRate = item.PayRate;
+		hrcontext.Update(item2);
+		var t=hrcontext.SaveChanges();
+		dbcontext.Update(item3);
+		dbcontext.SaveChanges();
+		navigationManager.NavigateTo("/");
+	}
+
+}

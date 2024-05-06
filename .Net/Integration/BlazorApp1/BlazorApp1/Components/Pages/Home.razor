@@ -1,0 +1,94 @@
+﻿ 
+@page "/"
+@using BlazorApp1.Data;
+@using BlazorApp1.Models;
+@using Microsoft.EntityFrameworkCore;
+
+<PageTitle>Home</PageTitle>
+
+<h1 style="text-align:center;">HR+PR</h1>
+<table class="table table-dark table-hover" style="border: 1px solid black;">
+	<tr style=" text-align:center;border: 1px solid black;">
+		<td style="border: 1px solid black;">Employee ID</td>
+		<td style="border: 1px solid black;">Name</td>
+		<td style="border: 1px solid black;">Employee number</td>
+		<td style="border: 1px solid black;">Pay Rates</td>
+		<td style="border: 1px solid black;">Action</td>
+	</tr>
+		@using (var db = new HrContext())
+		{
+			var item =
+					from emp in db.Employments
+					join per in db.Personals
+					on emp.PersonalId equals per.PersonalId
+				select new
+					{
+						EmpID = emp.EmploymentId,
+						//PerID = per.PersonalId,
+						FName = per.CurrentFirstName,
+						MName = per.CurrentMiddleName,
+						LName = per.CurrentLastName,
+					};
+			foreach (var obj in item)
+			{
+				<tr style="align-content:center; text-align: center">
+				<td style="border: 1px solid black;">@obj.EmpID</td>
+				<td style="border: 1px solid black;">@obj.FName @obj.MName @obj.LName</td>
+				@if (dicEmp.ContainsKey(obj.EmpID))
+				{
+					<td style="border: 1px solid black;">@dicEmp[obj.EmpID].EmployeeNumber</td>
+				}
+				else
+				{
+					<td style="border: 1px solid black;"></td>
+				}
+		
+				@if (dicEmp.ContainsKey(obj.EmpID))
+				{
+					<td>@dicEmp[obj.EmpID].PayRate</td>
+				}
+				else
+				{
+					<td style="border: 1px solid black;"></td>
+				}
+				
+				
+				<td>
+					<a><button class="btn btn-danger">Delete</button></a>
+					<a href="/detail/@obj.EmpID"><button class="btn btn-primary">Edit</button></a>
+				</td>
+				
+				</tr>
+			}
+		}
+</table>
+
+@inject HrContext hrcontext;
+@inject MydbContext dbcontext;
+
+@code {
+	Dictionary<decimal, Employee> dicEmp = new Dictionary<decimal, Employee>();
+	Dictionary<decimal, Personal> dicPer = new Dictionary<decimal, Personal>();
+	List<Employment> employees = new List<Employment>();
+	List<decimal> listToRemove = new List<decimal>();
+	protected override async Task OnInitializedAsync()
+	{
+		//Tao List
+		List<Employee> empHR = new List<Employee>();
+		List<Personal> personal = new List<Personal>();
+		//Cho Data vao List 
+		empHR = await dbcontext.Employees.ToListAsync();
+		employees = await hrcontext.Employments.ToListAsync();
+		personal = await hrcontext.Personals.ToListAsync();
+		
+		//Doi tu List qua Dictionary de tim cho de
+		foreach (var emp in empHR)
+		{
+			dicEmp.Add(emp.IdEmployee, emp);
+		}
+		foreach (var emp in personal)
+		{
+			dicPer.Add(emp.PersonalId, emp);
+		}
+	}
+}
