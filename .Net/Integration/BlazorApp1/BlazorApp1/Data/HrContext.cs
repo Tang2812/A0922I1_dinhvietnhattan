@@ -32,6 +32,7 @@ public partial class HrContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+
         modelBuilder.Entity<BenefitPlan>(entity =>
         {
             entity.HasKey(e => e.BenefitPlansId);

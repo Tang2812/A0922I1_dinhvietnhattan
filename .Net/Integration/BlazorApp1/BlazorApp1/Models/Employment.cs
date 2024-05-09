@@ -5,6 +5,20 @@ namespace BlazorApp1.Models;
 
 public partial class Employment
 {
+    public Employment(decimal employmentId, string? employmentCode, string? employmentStatus, DateOnly? hireDateForWorking, string? workersCompCode, DateOnly? terminationDate, DateOnly? rehireDateForWorking, DateOnly? lastReviewDate, decimal? numberDaysRequirementOfWorkingPerMonth, decimal? personalId)
+    {
+        EmploymentId = employmentId;
+        EmploymentCode = employmentCode;
+        EmploymentStatus = employmentStatus;
+        HireDateForWorking = hireDateForWorking;
+        WorkersCompCode = workersCompCode;
+        TerminationDate = terminationDate;
+        RehireDateForWorking = rehireDateForWorking;
+        LastReviewDate = lastReviewDate;
+        NumberDaysRequirementOfWorkingPerMonth = numberDaysRequirementOfWorkingPerMonth;
+        PersonalId = personalId;
+    }
+
     public decimal EmploymentId { get; set; }
 
     public string? EmploymentCode { get; set; }

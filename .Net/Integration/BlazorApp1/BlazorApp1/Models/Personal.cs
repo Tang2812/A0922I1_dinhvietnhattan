@@ -5,6 +5,29 @@ namespace BlazorApp1.Models;
 
 public partial class Personal
 {
+    public Personal(decimal personalId, string? currentFirstName, string? currentLastName, string? currentMiddleName, DateOnly? birthDate, string? socialSecurityNumber, string? driversLicense, string? currentAddress1, string? currentAddress2, string? currentCity, string? currentCountry, decimal? currentZip, string? currentGender, string? currentPhoneNumber, string? currentPersonalEmail, string? currentMaritalStatus, string? ethnicity, short? shareholderStatus, decimal? benefitPlanId)
+    {
+        PersonalId = personalId;
+        CurrentFirstName = currentFirstName;
+        CurrentLastName = currentLastName;
+        CurrentMiddleName = currentMiddleName;
+        BirthDate = birthDate;
+        SocialSecurityNumber = socialSecurityNumber;
+        DriversLicense = driversLicense;
+        CurrentAddress1 = currentAddress1;
+        CurrentAddress2 = currentAddress2;
+        CurrentCity = currentCity;
+        CurrentCountry = currentCountry;
+        CurrentZip = currentZip;
+        CurrentGender = currentGender;
+        CurrentPhoneNumber = currentPhoneNumber;
+        CurrentPersonalEmail = currentPersonalEmail;
+        CurrentMaritalStatus = currentMaritalStatus;
+        Ethnicity = ethnicity;
+        ShareholderStatus = shareholderStatus;
+        BenefitPlanId = benefitPlanId;
+    }
+
     public decimal PersonalId { get; set; }
 
     public string? CurrentFirstName { get; set; }

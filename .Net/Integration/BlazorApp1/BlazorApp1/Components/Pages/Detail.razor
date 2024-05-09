@@ -7,89 +7,350 @@
 @using (var db = new HrContext())
 {
 	var mydb = new MydbContext();
-	var item1 = db.Employments.First(a => a.EmploymentId == Convert.ToDecimal(id));
-	var item2= db.Personals.First(a => a.PersonalId == Convert.ToDecimal(id));
-	
-	var item3 = mydb.Employees.First(a => a.IdEmployee == Convert.ToDecimal(id));
+	var employment = db.Employments.First(a => a.EmploymentCode == id);
+    var personal = db.Personals.First(a => a.PersonalId == Convert.ToDecimal(employment.PersonalId));
 
-	ModelTest item = new ModelTest(item1.EmploymentId, item2.CurrentFirstName, item2.CurrentMiddleName, item2.CurrentLastName, item3.PayRate);
-	
-	<EditForm Model= "item" OnSubmit="@FormSubmitted" FormName="form-1">
+	var employee = mydb.Employees.First(a => a.EmployeeNumber == Convert.ToDecimal(id));
 
+    EmployeeRegister employeeRegister = new EmployeeRegister()
+                {
+                    EmloyeeCode = employee.EmployeeNumber.ToString(),
+                    FirstName = personal.CurrentFirstName,
+                    MidName = personal.CurrentMiddleName,
+                    LastName = personal.CurrentLastName,
+                    Ssn = personal.SocialSecurityNumber,
+                    IdPayrate = employee.PayRatesIdPayRates,
+                    VacationDays = Convert.ToInt16(employee.VacationDays),
+                    PaidToDate = Convert.ToInt16(employee.PaidToDate),
+                    PaidLastYear = Convert.ToInt16(employee.PaidToDate),
+                    BirthDate1 = (DateOnly)personal.BirthDate,
+                    DriverLicense = personal.DriversLicense,
+                    CurentAddress1 = personal.CurrentAddress1,
+                    CurentAddress2 = personal.CurrentAddress2,
+                    CurentCity = personal.CurrentCity,
+                    CurentCountry = personal.CurrentCountry,
+                    CurentZip = personal.CurrentZip.ToString(),
+                    CurentGender = personal.CurrentGender,
+                    CurentPhone = personal.CurrentPhoneNumber,
+                    CurentEmail = personal.CurrentPersonalEmail,
+                    CurentMartialStatus = personal.CurrentMaritalStatus,
+                    Ethnicity = personal.Ethnicity,
+                    ShareHolderStatus = Convert.ToInt16(personal.ShareholderStatus),
+                    BenefitplanId = Convert.ToInt16(personal.BenefitPlanId),
+                    EmploymentStatus = employment.EmploymentStatus,
+                    HireDateForWorking = (DateOnly)employment.HireDateForWorking,
+                    WorkersCompCode = employment.WorkersCompCode,
+                    TerminationDatel = (DateOnly)employment.TerminationDate,
+                    RehireDateForWorking =(DateOnly)employment.RehireDateForWorking,
+                    LastReviewDate=(DateOnly)employment.LastReviewDate,
+                    NumberDaysRequierementOfWorkingPerMonth=Convert.ToInt16(employment.NumberDaysRequirementOfWorkingPerMonth),          
 
-		<table class="table">
-			<tr>
-				<td>Employee First Name</td>
-				<td>
-					<InputText @bind-Value="@item.FirstName" />
-				</td>
-			</tr>
-			<tr>
-				<td>Employee Middle Name</td>
-				<td>
-					<InputText @bind-Value="@item.MidName" />
-				</td>
-			</tr>
-			<tr>
-				<td>Employee Last Name</td>
-				<td>
-					<InputText @bind-Value="@item.LastName" />
-				</td>
-			</tr>
-			<tr>
-				<td>Employee Payrate</td>
-				<td>
-					<InputSelect @bind-Value="@item.PayRate" >
-						
-						@foreach (var tmp in payRates)
-						{
-							<option value="@tmp.PayRateName">@tmp.PayRateName</option>
-						}
-					</InputSelect>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<a href="/"> <button class="btn btn-danger">Exit</button></a>
-				</td>
-				<td>
-					<button class="btn btn-primary" type="submit">Submit</button>
-				</td>
-			</tr>
-		</table>
-	</EditForm>
+    };
+
+    <EditForm Model="@employeeRegister" OnSubmit="@FormSubmitted" FormName="form1" Enhance>
+        <DataAnnotationsValidator />
+        <table class="table">
+            <thead></thead>
+            <thead></thead>
+            <tr>
+                <td>
+                    <p style="color:goldenrod">Employee code</p>
+
+                    <input class="form-control" value="@employeeRegister.EmloyeeCode" readonly/>
+                    <small class="form-text text-muted">Do not edit employee code </small>
+                </td>
+                <td>
+                    <p style="color:goldenrod">Employee Mail</p>
+                    <InputText class="form-control" @bind-Value="employeeRegister.CurentEmail"></InputText>
+                    <small class="form-text text-muted">Pleased enter employee mail here</small>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="color:goldenrod"> Employee First Name</p>
+                    <InputText class="form-control" @bind-Value="employeeRegister.FirstName"></InputText>
+                    <small class="form-text text-muted">Pleased enter employee first name here</small>
+                </td>
+                <td>
+                    <p style="color:goldenrod">Employee Matial status</p>
+                    <InputSelect class="form-select" @bind-Value="employeeRegister.CurentMartialStatus">
+                        <option value="Single">Single</option>
+                        <option value="Maried">Maried</option>
+                        <option value="Divorced">Divorced</option>
+                        <option value="Another">Another</option>
+                    </InputSelect>
+                    <br />
+                    <small class="form-text text-muted">Pleased choose employee matial status here</small>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="color:goldenrod">Employee Midel name</p>
+
+                    <InputText class="form-control" @bind-Value="employeeRegister.MidName"></InputText>
+                    <small class="form-text text-muted">Pleased enter employee mid name here</small>
+                </td>
+                <td>
+                    <p style="color:goldenrod">Employee Ethnicity</p>
+                    <InputText class="form-control" @bind-Value="employeeRegister.Ethnicity"></InputText>
+                    <small class="form-text text-muted">Pleased enter employee ethnicity here</small>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="color:goldenrod">Employee Last name</p>
+
+                    <InputText class="form-control" @bind-Value="employeeRegister.LastName"></InputText>
+                    <small class="form-text text-muted">Pleased enter employee last name here</small>
+                </td>
+                <td>
+                    <p style="color:goldenrod">Employee Security Social Number </p>
+
+                    <InputText class="form-control" @bind-Value="employeeRegister.Ssn"></InputText>
+                    <small class="form-text text-muted">Pleased enter employee Security Social Number here</small>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="color:goldenrod">Employee share holder status</p>
+                    <InputNumber class="form-control" @bind-Value="employeeRegister.ShareHolderStatus"></InputNumber>
+                    <small class="form-text text-muted">Pleased enter employee share holder status here</small>
+                </td>
+
+                <td>
+                    <p style="color:goldenrod">Employee Benefit plan</p>
+                    <InputSelect class="form-select" @bind-Value="employeeRegister.BenefitplanId">
+
+                        @foreach (var tmp in benefitPlans)
+                        {
+                            <option value="@tmp.BenefitPlansId">@tmp.PlanName</option>
+                        }
+                    </InputSelect>
+                    <small class="form-text text-muted">Pleased choose benefit plan</small>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="color:goldenrod">Employee Payrate</p>
+
+                    <InputSelect class="form-select" @bind-Value="employeeRegister.IdPayrate">
+
+                        @foreach (var tmp in payRates)
+                        {
+                            <option value="@tmp.IdPayRates">@tmp.PayRateName</option>
+                        }
+                    </InputSelect>
+                    <small class="form-text text-muted">Pleased enter employee Pay rate here</small>
+                </td>
+                <td>
+                    <p style="color:goldenrod">Employment Status</p>
+                    <InputText class="form-control" @bind-Value="employeeRegister.EmploymentStatus"></InputText>
+                    <small class="form-text text-muted">Pleased enter employee status here</small>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="color:goldenrod">Employee Vacation days</p>
+
+                    <InputNumber class="form-control" @bind-Value="employeeRegister.VacationDays"></InputNumber>
+                    <small class="form-text text-muted">Pleased enter employee vacation days here</small>
+                </td>
+                <td>
+                    <p style="color:goldenrod">Employee Paid To Date</p>
+                    <InputNumber class="form-control" @bind-Value="employeeRegister.PaidToDate"></InputNumber>
+                    <small class="form-text text-muted">Pleased enter employee Paid to date here</small>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="color:goldenrod">Employee Worker Comp Code</p>
+
+                    <InputText class="form-control" @bind-Value="employeeRegister.WorkersCompCode"></InputText>
+                    <small class="form-text text-muted">Pleased enter employee worker comp code here</small>
+                </td>
+                <td>
+                    <p style="color:goldenrod">Employee Paid Last Year</p>
+                    <InputNumber class="form-control" @bind-Value="employeeRegister.PaidLastYear"></InputNumber>
+                    <small class="form-text text-muted">Pleased enter employee paid last year here</small>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="color:goldenrod">Employee Termination Date</p>
+
+                    <InputDate class="form-control" @bind-Value="employeeRegister.TerminationDatel"></InputDate>
+                    <small class="form-text text-muted">Pleased enter employee termination date here</small>
+                </td>
+                <td>
+                    <p style="color:goldenrod">Employee Driver License</p>
+                    <InputText class="form-control" @bind-Value="employeeRegister.DriverLicense"></InputText>
+                    <small class="form-text text-muted">Pleased enter employee driver license here</small>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="color:goldenrod">Employee Curent Address 1</p>
+
+                    <InputText class="form-control" @bind-Value="employeeRegister.CurentAddress1"></InputText>
+                    <small class="form-text text-muted">Pleased enter employee Curent Address 1 here</small>
+                </td>
+                <td>
+                    <p style="color:goldenrod">Employee Curent Address 2</p>
+                    <InputText class="form-control" @bind-Value="employeeRegister.CurentAddress2"></InputText>
+                    <small class="form-text text-muted">Pleased enter employee Curent Address 2 here</small>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="color:goldenrod">Employee Curent City </p>
+
+                    <InputText class="form-control" @bind-Value="employeeRegister.CurentCity"></InputText>
+                    <small class="form-text text-muted">Pleased enter employee Curent city here</small>
+                </td>
+                <td>
+                    <p style="color:goldenrod">Employee Curent Country</p>
+                    <InputText class="form-control" @bind-Value="employeeRegister.CurentCountry"></InputText>
+                    <small class="form-text text-muted">Pleased enter employee Curent country here</small>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="color:goldenrod">Employee Curent Zip </p>
+
+                    <InputText class="form-control" @bind-Value="employeeRegister.CurentZip"></InputText>
+                    <small class="form-text text-muted">Pleased enter employee Curent zip here</small>
+                </td>
+                <td>
+                    <p style="color:goldenrod">Employee Curent Gender</p>
+                    <InputSelect class="form-select" @bind-Value="employeeRegister.CurentGender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="another">Another</option>
+                    </InputSelect>
+                    <small class="form-text text-muted">Pleased enter employee Curent gender here</small>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="color:goldenrod">Employee Hire Date For Working </p>
+
+                    <InputDate class="form-control" @bind-Value="employeeRegister.HireDateForWorking"></InputDate>
+                    <small class="form-text text-muted">Pleased enter employee hire date for working here</small>
+                </td>
+                <td>
+                    <p style="color:goldenrod">Employee Birth Date</p>
+                    <InputDate class="form-control" @bind-Value="employeeRegister.BirthDate1"></InputDate>
+                    <small class="form-text text-muted">Pleased enter employee birthday here</small>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="color:goldenrod">Employee Rehire Date For Working </p>
+
+                    <InputDate class="form-control" @bind-Value="employeeRegister.RehireDateForWorking"></InputDate>
+                    <small class="form-text text-muted">Pleased enter employee rehire date for working here</small>
+                </td>
+                <td>
+                    <p style="color:goldenrod">Employee Last Review Date</p>
+                    <InputDate class="form-control" @bind-Value="employeeRegister.LastReviewDate"></InputDate>
+                    <small class="form-text text-muted">Pleased enter employee last review date here</small>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="color:goldenrod">Employee Phonenumber</p>
+
+                    <InputText class="form-control" @bind-Value="employeeRegister.CurentPhone"></InputText>
+                    <small class="form-text text-muted">Pleased enter employee phonenumber here</small>
+                </td>
+                <td>
+                    <p style="color:goldenrod">Employee Number Days Required Of Working Per Month</p>
+                    <InputNumber class="form-control" @bind-Value="employeeRegister.NumberDaysRequierementOfWorkingPerMonth"></InputNumber>
+                    <small class="form-text text-muted">Pleased enter employeenumber days required of working per month</small>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="/"> <button class="btn btn-danger">Exit</button></a>
+                    <button class="btn btn-primary" type="submit" value="Save">Save</button>
+                </td>
+
+            </tr>
+        </table>
+
+    </EditForm>
 }
 @inject HrContext hrcontext;
 @inject MydbContext dbcontext;
 @inject NavigationManager navigationManager;
 @code {
-	[SupplyParameterFromForm]
-	ModelTest item { get; set; }
-	[Parameter]
-	public string id{ set; get; }
-	Dictionary<decimal, Employee> dicEmp = new Dictionary<decimal, Employee>();
-	Dictionary<decimal, Personal> dicPer = new Dictionary<decimal, Personal>();
-	List<Employment> employees = new List<Employment>();
-	List<decimal> listToRemove = new List<decimal>();
-	List<PayRate> payRates = new List<PayRate>();
-	protected override async Task OnInitializedAsync()
-	{		
-		payRates = await dbcontext.PayRates.ToListAsync();
+    [SupplyParameterFromForm]
+    EmployeeRegister employeeRegister { get; set; }
+    [Parameter]
+    public string id{ set; get; }
 
-	}
-	void FormSubmitted()
-	{
-		var item1 = hrcontext.Employments.First(a => a.EmploymentId == Convert.ToDecimal(id));
-		var item2 = hrcontext.Personals.First(a => a.PersonalId == Convert.ToDecimal(id));
+    List<BenefitPlan> benefitPlans = new List<BenefitPlan>();
+    Dictionary<decimal, Employee> dicEmp = new Dictionary<decimal, Employee>();
+    Dictionary<decimal, Personal> dicPer = new Dictionary<decimal, Personal>();
+    List<Employment> employees = new List<Employment>();
+    List<decimal> listToRemove = new List<decimal>();
+    List<PayRate> payRates = new List<PayRate>();
+    protected override async Task OnInitializedAsync()
+    {
+        benefitPlans = await hrcontext.BenefitPlans.ToListAsync();
+        payRates = await dbcontext.PayRates.ToListAsync();
 
-		var item3 = dbcontext.Employees.First(a => a.IdEmployee == Convert.ToDecimal(id));
-		item2.CurrentFirstName = item.FirstName;
-		item2.CurrentMiddleName = item.MidName;
-		item2.CurrentLastName = item.LastName;
-		item3.PayRate = item.PayRate;
-		hrcontext.Update(item2);
+    }
+    void FormSubmitted()
+    {
+        var item1 = hrcontext.Employments.First(a => a.EmploymentCode == id);
+        var item2 = hrcontext.Personals.First(a => a.PersonalId == Convert.ToDecimal(item1.PersonalId));
+        var item3 = dbcontext.Employees.First(a => a.EmployeeNumber == Convert.ToDecimal(id));
+        ////////////////////////////////////////////////////////////////////////////////////
+
+        item1.EmploymentStatus = employeeRegister.EmploymentStatus;
+        item1.HireDateForWorking = employeeRegister.HireDateForWorking;
+        item1.WorkersCompCode = employeeRegister.WorkersCompCode;
+        item1.TerminationDate= employeeRegister.TerminationDatel;
+        item1.RehireDateForWorking = employeeRegister.RehireDateForWorking;
+        item1.LastReviewDate= employeeRegister.LastReviewDate;
+        item1.NumberDaysRequirementOfWorkingPerMonth = employeeRegister.NumberDaysRequierementOfWorkingPerMonth;
+        ///////////////////////////////////////////////////////////////////////////////////////
+        item2.CurrentFirstName=employeeRegister.FirstName;
+        item2.CurrentMiddleName= employeeRegister.MidName;
+        item2.CurrentLastName=employeeRegister.LastName;
+        item2.BirthDate=employeeRegister.BirthDate1;
+        item2.SocialSecurityNumber = employeeRegister.Ssn;
+        item2.DriversLicense = employeeRegister.DriverLicense;
+        item2.CurrentAddress1=employeeRegister.CurentAddress1;
+        item2.CurrentAddress2 = employeeRegister.CurentAddress2;
+        item2.CurrentCity= employeeRegister.CurentCity;
+        item2.CurrentZip = Convert.ToDecimal(employeeRegister.CurentZip);
+        item2.CurrentGender=employeeRegister.CurentGender;
+        item2.CurrentPhoneNumber=employeeRegister.CurentPhone;
+        item2.CurrentPersonalEmail=employeeRegister.CurentEmail;
+        item2.CurrentMaritalStatus=employeeRegister.CurentMartialStatus;
+        item2.Ethnicity = employeeRegister.Ethnicity;
+        item2.ShareholderStatus =(short) employeeRegister.ShareHolderStatus;
+        item2.BenefitPlanId = employeeRegister.BenefitplanId;
+
+        ///////////////////////////////////////////////////////////////////////////////////////
+        item3.LastName = employeeRegister.LastName;
+        item3.FirstName = employeeRegister.FirstName + " " + employeeRegister.MidName;
+        item3.Ssn = Convert.ToDecimal(employeeRegister.Ssn);
+        item3.PayRate = payRates[employeeRegister.IdPayrate].PayRateName;
+        item3.PayRatesIdPayRates = employeeRegister.IdPayrate;
+        item3.VacationDays=employeeRegister.VacationDays;
+        item3.PaidToDate=employeeRegister.PaidToDate;
+        item3.PaidLastYear = employeeRegister.PaidLastYear;
+
+
+
+        
+        hrcontext.Update(item1);
+        hrcontext.Update(item2);
 		var t=hrcontext.SaveChanges();
-		dbcontext.Update(item3);
+        dbcontext.Update(item3);
 		dbcontext.SaveChanges();
 		navigationManager.NavigateTo("/");
 	}
