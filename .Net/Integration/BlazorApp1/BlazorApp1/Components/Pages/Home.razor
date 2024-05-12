@@ -1,19 +1,18 @@
-﻿ 
-@page "/"
+﻿ @page "/"
 @using BlazorApp1.Data;
 @using BlazorApp1.Models;
 @using Microsoft.EntityFrameworkCore;
-
+@rendermode InteractiveServer
 <PageTitle>Home</PageTitle>
 
 <h1 style="text-align:center;">HR+PR</h1>
 <table class="table table-dark table-hover" style="border: 1px solid black;">
 	<tr style=" text-align:center;border: 1px solid black;">
-		<td style="border: 1px solid black;">Employee ID</td>
-		<td style="border: 1px solid black;">Name</td>
-		<td style="border: 1px solid black;">Employee number</td>
-		<td style="border: 1px solid black;">Pay Rates</td>
-		<td style="border: 1px solid black;">Action</td>
+		<th style="border: 1px solid black;color:black">Employee ID</th>
+		<th style="border: 1px solid black;color:black">Name</th>
+		<th style="border: 1px solid black;color:black">Employee number</th>
+		<th style="border: 1px solid black;color:black">Pay Rates</th>
+		<th style="border: 1px solid black;color:black">Action</th>
 	</tr>
 		@using (var db = new HrContext())
 		{
@@ -25,6 +24,7 @@
 					{
 						EmpID = emp.EmploymentId,
 						EmCode= emp.EmploymentCode,
+						PersId= per.PersonalId,
 						//PerID = per.PersonalId,
 						FName = per.CurrentFirstName,
 						MName = per.CurrentMiddleName,
@@ -33,30 +33,36 @@
 			foreach (var obj in item)
 			{
 				<tr style="align-content:center; text-align: center">
-				<td style="border: 1px solid black;">@obj.EmpID</td>
-				<td style="border: 1px solid black;">@obj.FName @obj.MName @obj.LName</td>
+				<td style="color:black;text-align:center;border: 1px solid black;">@obj.EmpID</td>
+				<td style="color:black;text-align:center;border: 1px solid black;">@obj.FName @obj.MName @obj.LName</td>
 				@if (dicEmp.ContainsKey(obj.EmpID))
 				{
-					<td style="border: 1px solid black;">@dicEmp[obj.EmpID].EmployeeNumber</td>
+					<td style="color:black;text-align:center;border: 1px solid black;">@dicEmp[obj.EmpID].EmployeeNumber</td>
 				}
 				else
 				{
-					<td style="border: 1px solid black;"></td>
+					<td style="color:black;text-align:center;border: 1px solid black;"></td>
 				}
 		
 				@if (dicEmp.ContainsKey(obj.EmpID))
 				{
-					<td>@dicEmp[obj.EmpID].PayRate</td>
+					<td style ="color:black;text-align:center;border: 1px solid black;">@dicEmp[obj.EmpID].PayRate</td>
 				}
 				else
 				{
-					<td style="border: 1px solid black;"></td>
+					<td style="color:black;text-align:center;border: 1px solid black;"></td>
 				}
 				
 				
 				<td>
-					<a><button class="btn btn-danger">Delete</button></a>
-					<a href="/detail/@obj.EmCode"><button class="btn btn-primary">Edit</button></a>
+					<button style="border-radius:25px;background-color:red;color:white;margin-bottom:5px;border-width:2px" @onclick="@(e=>DeleteItem(e,obj.EmCode,obj.PersId))">Delete</button>
+
+					<a href="/detail/@obj.EmCode">
+
+						<button style="border-radius:25px;background-color:deepskyblue;color:white;margin-top:5px;border-width:1.5px">Detail</button>
+
+					</a>
+
 				</td>
 				
 				</tr>
@@ -66,7 +72,7 @@
 
 @inject HrContext hrcontext;
 @inject MydbContext dbcontext;
-
+@inject NavigationManager navigationManager;
 @code {
 	Dictionary<decimal, Employee> dicEmp = new Dictionary<decimal, Employee>();
 	Dictionary<decimal, Personal> dicPer = new Dictionary<decimal, Personal>();
@@ -81,7 +87,7 @@
 		empHR = await dbcontext.Employees.ToListAsync();
 		employees = await hrcontext.Employments.ToListAsync();
 		personal = await hrcontext.Personals.ToListAsync();
-		
+
 		//Doi tu List qua Dictionary de tim cho de
 		foreach (var emp in empHR)
 		{
@@ -92,4 +98,14 @@
 			dicPer.Add(emp.PersonalId, emp);
 		}
 	}
+	void DeleteItem(MouseEventArgs e,string emId, decimal perId)
+	{
+		hrcontext.Remove(hrcontext.Employments.Single(a => a.EmploymentCode == emId));
+		hrcontext.Remove(hrcontext.Personals.Single(a => a.PersonalId == perId));
+		hrcontext.SaveChanges();
+		dbcontext.Remove(dbcontext.Employees.Single(a => a.EmployeeNumber ==Convert.ToInt16(emId)));
+		dbcontext.SaveChanges();
+
+	}
+
 }

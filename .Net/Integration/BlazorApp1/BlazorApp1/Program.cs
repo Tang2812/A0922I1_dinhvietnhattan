@@ -1,5 +1,6 @@
 using BlazorApp1.Components;
 using BlazorApp1.Data;
+//using Blazored.Toast;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 builder.Services.AddScoped<HrContext>();
+//builder.Services.AddBlazoredToast();
 builder.Services.AddScoped<MydbContext>();
 var app = builder.Build();
 
